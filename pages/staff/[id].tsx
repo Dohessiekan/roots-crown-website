@@ -531,11 +531,26 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         return { notFound: true }
       }
 
+      // Parse the specialties JSON string
+      let parsedStaff = {
+        ...staff,
+        specialties: []
+      }
+      
+      try {
+        if (staff.specialties) {
+          parsedStaff.specialties = JSON.parse(staff.specialties)
+        }
+      } catch (error) {
+        console.error('Error parsing specialties:', error)
+        parsedStaff.specialties = []
+      }
+
       await prisma.$disconnect()
 
       return {
         props: {
-          staff: JSON.parse(JSON.stringify(staff))
+          staff: JSON.parse(JSON.stringify(parsedStaff))
         }
       }
     } catch (dbError) {

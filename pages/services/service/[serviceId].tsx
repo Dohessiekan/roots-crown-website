@@ -122,7 +122,9 @@ export default function ServiceDetail({ service, availableStaff }: ServiceDetail
                         </div>
                       </div>
                       <p className="text-primary-green font-semibold text-sm mb-2">{staff.title}</p>
-                      <p className="text-gray-700 text-sm mb-4">Specialties: {staff.specialties.join(', ')}</p>
+                      <p className="text-gray-700 text-sm mb-4">
+                        Specialties: {Array.isArray(staff.specialties) ? staff.specialties.join(', ') : 'General Services'}
+                      </p>
                       <div className="flex justify-start items-center">
                         <button
                           className="text-white font-body font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors text-sm"
@@ -209,12 +211,30 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         staff.staffServices.length > 0
       )
 
+      // Parse specialties for each staff member
+      const parsedStaff = availableStaff.map(staffMember => {
+        let specialties = []
+        try {
+          if (staffMember.specialties) {
+            specialties = JSON.parse(staffMember.specialties)
+          }
+        } catch (error) {
+          console.error('Error parsing specialties for', staffMember.name, ':', error)
+          specialties = []
+        }
+        
+        return {
+          ...staffMember,
+          specialties
+        }
+      })
+
       await prisma.$disconnect()
 
       return {
         props: {
           service: JSON.parse(JSON.stringify(service)),
-          availableStaff: JSON.parse(JSON.stringify(availableStaff))
+          availableStaff: JSON.parse(JSON.stringify(parsedStaff))
         }
       }
     } catch (dbError) {

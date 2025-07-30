@@ -83,7 +83,7 @@ export default function StaffPage({ staff }: StaffPageProps) {
                       </div>
                       <p className="text-primary-green font-semibold text-sm mb-2">{staffMember.title}</p>
                       <p className="text-gray-700 text-sm mb-4">
-                        Specialties: {staffMember.specialties ? staffMember.specialties.join(', ') : 'General Services'}
+                        Specialties: {Array.isArray(staffMember.specialties) ? staffMember.specialties.join(', ') : 'General Services'}
                       </p>
                       <div className="flex justify-start items-center">
                         <button
@@ -149,11 +149,29 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       })
 
+      // Parse specialties for each staff member
+      const parsedStaff = staff.map(staffMember => {
+        let specialties = []
+        try {
+          if (staffMember.specialties) {
+            specialties = JSON.parse(staffMember.specialties)
+          }
+        } catch (error) {
+          console.error('Error parsing specialties for', staffMember.name, ':', error)
+          specialties = []
+        }
+        
+        return {
+          ...staffMember,
+          specialties
+        }
+      })
+
       await prisma.$disconnect()
 
       return {
         props: {
-          staff: JSON.parse(JSON.stringify(staff))
+          staff: JSON.parse(JSON.stringify(parsedStaff))
         }
       }
     } catch (dbError) {

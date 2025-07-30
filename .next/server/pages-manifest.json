@@ -4,5 +4,9 @@
   "/_document": "pages/_document.js",
   "/services": "pages/services.js",
   "/services/[category]": "pages/services/[category].js",
-  "/services/service/[serviceId]": "pages/services/service/[serviceId].js"
+  "/services/service/[serviceId]": "pages/services/service/[serviceId].js",
+  "/staff/[id]": "pages/staff/[id].js",
+  "/api/availability/[staffId]": "pages/api/availability/[staffId].js",
+  "/api/staff/[id]/feedback": "pages/api/staff/[id]/feedback.js",
+  "/": "pages/index.js"
 }
