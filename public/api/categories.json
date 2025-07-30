@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hair",
+    "name": "Hair Services",
+    "slug": "hair-services",
+    "description": "Professional hair styling and treatments",
+    "icon": "\\images\\hairIcon.svg",
+    "createdAt": "2025-07-29T19:15:39.244Z",
+    "updatedAt": "2025-07-30T15:16:36.887Z"
+  },
+  {
+    "id": "skincare",
+    "name": "Facial Treatments",
+    "slug": "skincare-facials",
+    "description": "Professional facial and skincare treatments",
+    "icon": "\\images\\skinIcon.svg",
+    "createdAt": "2025-07-29T19:15:39.251Z",
+    "updatedAt": "2025-07-30T15:16:36.887Z"
+  },
+  {
+    "id": "massage",
+    "name": "Massage Therapy",
+    "slug": "massage-therapy",
+    "description": "Professional therapeutic massage services",
+    "icon": "\\images\\massageIcon.svg",
+    "createdAt": "2025-07-29T19:15:39.256Z",
+    "updatedAt": "2025-07-30T15:11:30.623Z"
+  },
+  {
+    "id": "nails",
+    "name": "Pedicure & Manicure",
+    "slug": "nail-services",
+    "description": "Professional nail care services",
+    "icon": "\\images\\nailsIcon.svg",
+    "createdAt": "2025-07-29T19:15:39.260Z",
+    "updatedAt": "2025-07-30T15:12:53.318Z"
+  },
+  {
+    "id": "body",
+    "name": "Body Treatments",
+    "slug": "body-treatments",
+    "description": "Full body care and wellness treatments",
+    "icon": "\\images\\BodyIcon.svg",
+    "createdAt": "2025-07-29T19:15:39.263Z",
+    "updatedAt": "2025-07-30T15:16:36.887Z"
+  },
+  {
+    "id": "tattoo",
+    "name": "Tattoo & Piercing",
+    "slug": "tattoo-piercing",
+    "description": "Professional tattoo and piercing services",
+    "icon": "\\images\\piercingIcon.svg",
+    "createdAt": "2025-07-29T19:56:11.355Z",
+    "updatedAt": "2025-07-30T15:14:17.860Z"
+  }
+]

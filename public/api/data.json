@@ -1,0 +1,2975 @@
+{
+  "categories": [
+    {
+      "id": "hair",
+      "name": "Hair Services",
+      "slug": "hair-services",
+      "description": "Professional hair styling and treatments",
+      "icon": "\\images\\hairIcon.svg",
+      "createdAt": "2025-07-29T19:15:39.244Z",
+      "updatedAt": "2025-07-30T15:16:36.887Z"
+    },
+    {
+      "id": "skincare",
+      "name": "Facial Treatments",
+      "slug": "skincare-facials",
+      "description": "Professional facial and skincare treatments",
+      "icon": "\\images\\skinIcon.svg",
+      "createdAt": "2025-07-29T19:15:39.251Z",
+      "updatedAt": "2025-07-30T15:16:36.887Z"
+    },
+    {
+      "id": "massage",
+      "name": "Massage Therapy",
+      "slug": "massage-therapy",
+      "description": "Professional therapeutic massage services",
+      "icon": "\\images\\massageIcon.svg",
+      "createdAt": "2025-07-29T19:15:39.256Z",
+      "updatedAt": "2025-07-30T15:11:30.623Z"
+    },
+    {
+      "id": "nails",
+      "name": "Pedicure & Manicure",
+      "slug": "nail-services",
+      "description": "Professional nail care services",
+      "icon": "\\images\\nailsIcon.svg",
+      "createdAt": "2025-07-29T19:15:39.260Z",
+      "updatedAt": "2025-07-30T15:12:53.318Z"
+    },
+    {
+      "id": "body",
+      "name": "Body Treatments",
+      "slug": "body-treatments",
+      "description": "Full body care and wellness treatments",
+      "icon": "\\images\\BodyIcon.svg",
+      "createdAt": "2025-07-29T19:15:39.263Z",
+      "updatedAt": "2025-07-30T15:16:36.887Z"
+    },
+    {
+      "id": "tattoo",
+      "name": "Tattoo & Piercing",
+      "slug": "tattoo-piercing",
+      "description": "Professional tattoo and piercing services",
+      "icon": "\\images\\piercingIcon.svg",
+      "createdAt": "2025-07-29T19:56:11.355Z",
+      "updatedAt": "2025-07-30T15:14:17.860Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "deepmassage",
+      "name": "Deep Tissue Massage",
+      "slug": "deep-tissue-massage",
+      "description": "Therapeutic deep tissue massage",
+      "price": "18,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:15:39.305Z",
+      "updatedAt": "2025-07-29T20:06:07.647Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "swedish-massage",
+      "name": "Swedish Massage",
+      "slug": "swedish-massage",
+      "description": "Relaxing full-body massage with gentle strokes",
+      "price": "15,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.373Z",
+      "updatedAt": "2025-07-29T20:06:07.579Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "hot-stone-massage",
+      "name": "Hot Stone Massage",
+      "slug": "hot-stone-massage",
+      "description": "Massage using heated stones for deep relaxation",
+      "price": "20,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.400Z",
+      "updatedAt": "2025-07-29T20:06:07.603Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "aromatherapy-massage",
+      "name": "Aromatherapy Massage",
+      "slug": "aromatherapy-massage",
+      "description": "Relaxing massage with essential oils",
+      "price": "16,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.406Z",
+      "updatedAt": "2025-07-29T20:06:07.608Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "prenatal-massage",
+      "name": "Prenatal Massage",
+      "slug": "prenatal-massage",
+      "description": "Safe and gentle massage for expectant mothers",
+      "price": "17,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.412Z",
+      "updatedAt": "2025-07-29T20:06:07.614Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "sports-massage",
+      "name": "Sports Massage",
+      "slug": "sports-massage",
+      "description": "Recovery and performance massage for athletes",
+      "price": "19,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.418Z",
+      "updatedAt": "2025-07-29T20:06:07.618Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "reflexology",
+      "name": "Reflexology",
+      "slug": "reflexology",
+      "description": "Therapeutic foot massage targeting pressure points",
+      "price": "12,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.428Z",
+      "updatedAt": "2025-07-29T20:06:07.623Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "couples-massage",
+      "name": "Couples Massage",
+      "slug": "couples-massage",
+      "description": "Relaxing massage session for two",
+      "price": "30,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.433Z",
+      "updatedAt": "2025-07-29T20:06:07.627Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "chair-massage",
+      "name": "Chair Massage",
+      "slug": "chair-massage",
+      "description": "Quick relaxation massage while seated",
+      "price": "8,000 RWF",
+      "duration": "20 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.438Z",
+      "updatedAt": "2025-07-29T20:06:07.632Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "thai-massage",
+      "name": "Thai Massage",
+      "slug": "thai-massage",
+      "description": "Traditional stretching and pressure point massage",
+      "price": "18,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.443Z",
+      "updatedAt": "2025-07-29T20:06:07.637Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "relaxmassage",
+      "name": "Relaxation Massage",
+      "slug": "relaxation-massage",
+      "description": "Gentle relaxing full-body massage",
+      "price": "15,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/massageIcon.svg",
+      "categoryId": "massage",
+      "createdAt": "2025-07-29T19:58:32.448Z",
+      "updatedAt": "2025-07-29T20:06:07.642Z",
+      "category": {
+        "id": "massage",
+        "name": "Massage Therapy",
+        "slug": "massage-therapy",
+        "description": "Professional therapeutic massage services",
+        "icon": "\\images\\massageIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.256Z",
+        "updatedAt": "2025-07-30T15:11:30.623Z"
+      }
+    },
+    {
+      "id": "classic-facial",
+      "name": "Classic Facial",
+      "slug": "classic-facial-treatment",
+      "description": "Deep cleansing and moisturizing facial treatment",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.456Z",
+      "updatedAt": "2025-07-29T20:06:07.651Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "anti-aging-facial",
+      "name": "Anti-Aging Facial",
+      "slug": "anti-aging-facial",
+      "description": "Advanced treatment targeting signs of aging",
+      "price": "18,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.461Z",
+      "updatedAt": "2025-07-29T20:06:07.655Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "acne-treatment",
+      "name": "Acne Treatment Facial",
+      "slug": "acne-treatment",
+      "description": "Specialized treatment for acne-prone skin",
+      "price": "15,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.466Z",
+      "updatedAt": "2025-07-29T20:06:07.660Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hydrating-facial",
+      "name": "Hydrating Facial",
+      "slug": "hydrating-facial",
+      "description": "Intensive moisture restoration treatment",
+      "price": "14,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.470Z",
+      "updatedAt": "2025-07-29T20:06:07.664Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "brightening-facial",
+      "name": "Brightening Facial",
+      "slug": "brightening-facial",
+      "description": "Treatment to even skin tone and add radiance",
+      "price": "16,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.475Z",
+      "updatedAt": "2025-07-29T20:06:07.669Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "sensitive-skin-facial",
+      "name": "Sensitive Skin Facial",
+      "slug": "sensitive-skin-facial",
+      "description": "Gentle treatment for delicate skin",
+      "price": "13,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.480Z",
+      "updatedAt": "2025-07-29T20:06:07.674Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "microdermabrasion",
+      "name": "Microdermabrasion",
+      "slug": "microdermabrasion",
+      "description": "Exfoliating treatment for smooth skin",
+      "price": "20,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.484Z",
+      "updatedAt": "2025-07-29T20:06:07.679Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "chemical-peel",
+      "name": "Chemical Peel",
+      "slug": "chemical-peel",
+      "description": "Professional skin resurfacing treatment",
+      "price": "25,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.489Z",
+      "updatedAt": "2025-07-29T20:06:07.684Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "oxygen-facial",
+      "name": "Oxygen Facial",
+      "slug": "oxygen-facial",
+      "description": "Rejuvenating treatment with oxygen infusion",
+      "price": "22,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.493Z",
+      "updatedAt": "2025-07-29T20:06:07.688Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "eyebrow-shaping",
+      "name": "Eyebrow Shaping",
+      "slug": "eyebrow-shaping",
+      "description": "Professional eyebrow sculpting and shaping",
+      "price": "5,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.497Z",
+      "updatedAt": "2025-07-29T20:06:07.692Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "classicfacial",
+      "name": "Classic Facial",
+      "slug": "classic-facial-service",
+      "description": "Traditional deep cleansing facial",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.502Z",
+      "updatedAt": "2025-07-29T20:06:07.697Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "deepfacial",
+      "name": "Deep Cleansing Facial",
+      "slug": "deep-cleansing-facial",
+      "description": "Intensive deep cleansing treatment",
+      "price": "14,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/skinIcon.svg",
+      "categoryId": "skincare",
+      "createdAt": "2025-07-29T19:58:32.506Z",
+      "updatedAt": "2025-07-29T20:06:07.702Z",
+      "category": {
+        "id": "skincare",
+        "name": "Facial Treatments",
+        "slug": "skincare-facials",
+        "description": "Professional facial and skincare treatments",
+        "icon": "\\images\\skinIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.251Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "body-scrub",
+      "name": "Full Body Scrub",
+      "slug": "body-scrub",
+      "description": "Exfoliating treatment for smooth, soft skin",
+      "price": "15,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.510Z",
+      "updatedAt": "2025-07-29T20:06:07.707Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "body-wrap",
+      "name": "Body Wrap",
+      "slug": "body-wrap",
+      "description": "Detoxifying and moisturizing body treatment",
+      "price": "20,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.515Z",
+      "updatedAt": "2025-07-29T20:06:07.711Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "cellulite-treatment",
+      "name": "Cellulite Treatment",
+      "slug": "cellulite-treatment",
+      "description": "Specialized treatment targeting cellulite",
+      "price": "25,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.519Z",
+      "updatedAt": "2025-07-29T20:06:07.716Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "back-facial",
+      "name": "Back Facial",
+      "slug": "back-facial",
+      "description": "Deep cleansing treatment for back skin",
+      "price": "18,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.525Z",
+      "updatedAt": "2025-07-29T20:06:07.720Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "sunless-tanning",
+      "name": "Sunless Tanning",
+      "slug": "sunless-tanning",
+      "description": "Professional spray tan application",
+      "price": "12,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.529Z",
+      "updatedAt": "2025-07-29T20:06:07.725Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "body-contouring",
+      "name": "Body Contouring",
+      "slug": "body-contouring",
+      "description": "Non-invasive body shaping treatment",
+      "price": "30,000 RWF",
+      "duration": "90 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.534Z",
+      "updatedAt": "2025-07-29T20:06:07.729Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "stretch-mark-treatment",
+      "name": "Stretch Mark Treatment",
+      "slug": "stretch-mark-treatment",
+      "description": "Specialized treatment for stretch marks",
+      "price": "22,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.538Z",
+      "updatedAt": "2025-07-29T20:06:07.734Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "detox-treatment",
+      "name": "Detox Treatment",
+      "slug": "detox-treatment",
+      "description": "Full body detoxification therapy",
+      "price": "25,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/BodyIcon.svg",
+      "categoryId": "body",
+      "createdAt": "2025-07-29T19:58:32.543Z",
+      "updatedAt": "2025-07-29T20:06:07.738Z",
+      "category": {
+        "id": "body",
+        "name": "Body Treatments",
+        "slug": "body-treatments",
+        "description": "Full body care and wellness treatments",
+        "icon": "\\images\\BodyIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.263Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "classic-manicure-new",
+      "name": "Classic Manicure",
+      "slug": "classic-manicure-new",
+      "description": "Traditional nail care and polish application",
+      "price": "8,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.548Z",
+      "updatedAt": "2025-07-29T20:06:07.743Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "gel-manicure-new",
+      "name": "Gel Manicure",
+      "slug": "gel-manicure-new",
+      "description": "Long-lasting gel polish manicure",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.552Z",
+      "updatedAt": "2025-07-29T20:06:07.748Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "french-manicure",
+      "name": "French Manicure",
+      "slug": "french-manicure",
+      "description": "Classic French tip nail styling",
+      "price": "10,000 RWF",
+      "duration": "50 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.556Z",
+      "updatedAt": "2025-07-29T20:06:07.752Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "nail-art",
+      "name": "Nail Art Design",
+      "slug": "nail-art",
+      "description": "Custom creative nail art and designs",
+      "price": "15,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.560Z",
+      "updatedAt": "2025-07-29T20:06:07.757Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "classic-pedicure-new",
+      "name": "Classic Pedicure",
+      "slug": "classic-pedicure-new",
+      "description": "Complete foot care and nail treatment",
+      "price": "10,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.565Z",
+      "updatedAt": "2025-07-29T20:06:07.762Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "spa-pedicure",
+      "name": "Spa Pedicure",
+      "slug": "spa-pedicure",
+      "description": "Luxurious foot treatment with massage",
+      "price": "15,000 RWF",
+      "duration": "75 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.569Z",
+      "updatedAt": "2025-07-29T20:06:07.766Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "gel-pedicure",
+      "name": "Gel Pedicure",
+      "slug": "gel-pedicure",
+      "description": "Long-lasting gel polish pedicure",
+      "price": "14,000 RWF",
+      "duration": "70 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.573Z",
+      "updatedAt": "2025-07-29T20:06:07.770Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "paraffin-treatment",
+      "name": "Paraffin Hand/Foot Treatment",
+      "slug": "paraffin-treatment",
+      "description": "Moisturizing paraffin wax treatment",
+      "price": "8,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.578Z",
+      "updatedAt": "2025-07-29T20:06:07.775Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "callus-removal",
+      "name": "Callus Removal",
+      "slug": "callus-removal",
+      "description": "Professional callus and dead skin removal",
+      "price": "6,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.582Z",
+      "updatedAt": "2025-07-29T20:06:07.779Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "nail-repair",
+      "name": "Nail Repair",
+      "slug": "nail-repair",
+      "description": "Treatment for damaged or broken nails",
+      "price": "5,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.587Z",
+      "updatedAt": "2025-07-29T20:06:07.783Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "manicure",
+      "name": "Classic Manicure",
+      "slug": "manicure",
+      "description": "Professional nail care and polish",
+      "price": "8,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.592Z",
+      "updatedAt": "2025-07-29T20:06:07.788Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "gelmanicure",
+      "name": "Gel Manicure",
+      "slug": "gel-manicure",
+      "description": "Long-lasting gel polish",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.596Z",
+      "updatedAt": "2025-07-29T20:06:07.792Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "pedicure",
+      "name": "Classic Pedicure",
+      "slug": "pedicure",
+      "description": "Complete foot care treatment",
+      "price": "10,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/nailsIcon.svg",
+      "categoryId": "nails",
+      "createdAt": "2025-07-29T19:58:32.600Z",
+      "updatedAt": "2025-07-29T20:06:07.797Z",
+      "category": {
+        "id": "nails",
+        "name": "Pedicure & Manicure",
+        "slug": "nail-services",
+        "description": "Professional nail care services",
+        "icon": "\\images\\nailsIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.260Z",
+        "updatedAt": "2025-07-30T15:12:53.318Z"
+      }
+    },
+    {
+      "id": "haircut-styling-new",
+      "name": "Haircut & Styling",
+      "slug": "haircut-styling-new",
+      "description": "Professional cut and style for all hair types",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.605Z",
+      "updatedAt": "2025-07-29T20:06:07.801Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hair-coloring-new",
+      "name": "Hair Coloring",
+      "slug": "hair-coloring-new",
+      "description": "Full or partial hair color application",
+      "price": "25,000 RWF",
+      "duration": "120 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.609Z",
+      "updatedAt": "2025-07-29T20:06:07.806Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "highlights",
+      "name": "Hair Highlights",
+      "slug": "highlights",
+      "description": "Professional highlighting service",
+      "price": "20,000 RWF",
+      "duration": "90 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.614Z",
+      "updatedAt": "2025-07-29T20:06:07.810Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "balayage",
+      "name": "Balayage",
+      "slug": "balayage",
+      "description": "Hand-painted natural hair highlighting",
+      "price": "30,000 RWF",
+      "duration": "150 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.618Z",
+      "updatedAt": "2025-07-29T20:06:07.815Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hair-treatment-new",
+      "name": "Deep Hair Treatment",
+      "slug": "hair-treatment-new",
+      "description": "Intensive conditioning and repair treatment",
+      "price": "15,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.623Z",
+      "updatedAt": "2025-07-29T20:06:07.819Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "keratin-treatment",
+      "name": "Keratin Treatment",
+      "slug": "keratin-treatment",
+      "description": "Smoothing and strengthening hair treatment",
+      "price": "40,000 RWF",
+      "duration": "180 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.627Z",
+      "updatedAt": "2025-07-29T20:06:07.823Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hair-extensions",
+      "name": "Hair Extensions",
+      "slug": "hair-extensions",
+      "description": "Professional hair extension application",
+      "price": "35,000 RWF",
+      "duration": "120 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.631Z",
+      "updatedAt": "2025-07-29T20:06:07.828Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "bridal-hair",
+      "name": "Bridal Hair Styling",
+      "slug": "bridal-hair",
+      "description": "Special occasion hair styling",
+      "price": "25,000 RWF",
+      "duration": "90 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.636Z",
+      "updatedAt": "2025-07-29T20:06:07.832Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hair-wash-blowdry",
+      "name": "Wash & Blow Dry",
+      "slug": "hair-wash-blowdry",
+      "description": "Professional hair washing and styling",
+      "price": "8,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.640Z",
+      "updatedAt": "2025-07-29T20:06:07.837Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "scalp-treatment",
+      "name": "Scalp Treatment",
+      "slug": "scalp-treatment",
+      "description": "Therapeutic scalp care and massage",
+      "price": "12,000 RWF",
+      "duration": "45 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.645Z",
+      "updatedAt": "2025-07-29T20:06:07.842Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "haircut",
+      "name": "Hair Cut & Styling",
+      "slug": "haircut",
+      "description": "Professional haircut and styling",
+      "price": "12,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.649Z",
+      "updatedAt": "2025-07-29T20:06:07.846Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "haircolor",
+      "name": "Hair Coloring",
+      "slug": "haircolor",
+      "description": "Professional hair coloring service",
+      "price": "25,000 RWF",
+      "duration": "120 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.653Z",
+      "updatedAt": "2025-07-29T20:06:07.851Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "hairtreatment",
+      "name": "Hair Treatment",
+      "slug": "hairtreatment",
+      "description": "Deep conditioning hair treatment",
+      "price": "15,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/hairIcon.svg",
+      "categoryId": "hair",
+      "createdAt": "2025-07-29T19:58:32.658Z",
+      "updatedAt": "2025-07-29T20:06:07.856Z",
+      "category": {
+        "id": "hair",
+        "name": "Hair Services",
+        "slug": "hair-services",
+        "description": "Professional hair styling and treatments",
+        "icon": "\\images\\hairIcon.svg",
+        "createdAt": "2025-07-29T19:15:39.244Z",
+        "updatedAt": "2025-07-30T15:16:36.887Z"
+      }
+    },
+    {
+      "id": "small-tattoo",
+      "name": "Small Tattoo",
+      "slug": "small-tattoo",
+      "description": "Custom small tattoo design (up to 3 inches)",
+      "price": "25,000 RWF",
+      "duration": "60 minutes",
+      "image": "/images/tattooIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.663Z",
+      "updatedAt": "2025-07-29T20:06:07.860Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "medium-tattoo",
+      "name": "Medium Tattoo",
+      "slug": "medium-tattoo",
+      "description": "Custom medium tattoo design (3-6 inches)",
+      "price": "50,000 RWF",
+      "duration": "120 minutes",
+      "image": "/images/tattooIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.668Z",
+      "updatedAt": "2025-07-29T20:06:07.864Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "large-tattoo",
+      "name": "Large Tattoo",
+      "slug": "large-tattoo",
+      "description": "Custom large tattoo design (6+ inches)",
+      "price": "100,000 RWF",
+      "duration": "240 minutes",
+      "image": "/images/tattooIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.673Z",
+      "updatedAt": "2025-07-29T20:06:07.868Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "tattoo-consultation",
+      "name": "Tattoo Consultation",
+      "slug": "tattoo-consultation",
+      "description": "Design consultation and planning session",
+      "price": "5,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/tattooIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.677Z",
+      "updatedAt": "2025-07-29T20:06:07.873Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "ear-piercing",
+      "name": "Ear Piercing",
+      "slug": "ear-piercing",
+      "description": "Professional ear piercing with jewelry",
+      "price": "8,000 RWF",
+      "duration": "15 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.682Z",
+      "updatedAt": "2025-07-29T20:06:07.880Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "nose-piercing",
+      "name": "Nose Piercing",
+      "slug": "nose-piercing",
+      "description": "Professional nose piercing with jewelry",
+      "price": "10,000 RWF",
+      "duration": "20 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.687Z",
+      "updatedAt": "2025-07-29T20:06:07.887Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "lip-piercing",
+      "name": "Lip Piercing",
+      "slug": "lip-piercing",
+      "description": "Professional lip piercing with jewelry",
+      "price": "12,000 RWF",
+      "duration": "20 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.691Z",
+      "updatedAt": "2025-07-29T20:06:07.892Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "eyebrow-piercing",
+      "name": "Eyebrow Piercing",
+      "slug": "eyebrow-piercing",
+      "description": "Professional eyebrow piercing with jewelry",
+      "price": "10,000 RWF",
+      "duration": "20 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.699Z",
+      "updatedAt": "2025-07-29T20:06:07.898Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "body-piercing",
+      "name": "Body Piercing",
+      "slug": "body-piercing",
+      "description": "Professional body piercing service",
+      "price": "15,000 RWF",
+      "duration": "30 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.703Z",
+      "updatedAt": "2025-07-29T20:06:07.904Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    },
+    {
+      "id": "piercing-jewelry",
+      "name": "Piercing Jewelry Change",
+      "slug": "piercing-jewelry",
+      "description": "Professional jewelry change and care",
+      "price": "3,000 RWF",
+      "duration": "10 minutes",
+      "image": "/images/piercingIcon.svg",
+      "categoryId": "tattoo",
+      "createdAt": "2025-07-29T19:58:32.707Z",
+      "updatedAt": "2025-07-29T20:06:07.910Z",
+      "category": {
+        "id": "tattoo",
+        "name": "Tattoo & Piercing",
+        "slug": "tattoo-piercing",
+        "description": "Professional tattoo and piercing services",
+        "icon": "\\images\\piercingIcon.svg",
+        "createdAt": "2025-07-29T19:56:11.355Z",
+        "updatedAt": "2025-07-30T15:14:17.860Z"
+      }
+    }
+  ],
+  "staff": [
+    {
+      "id": "sarah",
+      "name": "Sarah Johnson",
+      "title": "Licensed Massage Therapist",
+      "bio": "Sarah has over 8 years of experience in therapeutic massage and specializes in Swedish and deep tissue techniques.",
+      "email": "sarah@rootsandcrown.rw",
+      "phone": "+250-788-123-456",
+      "image": "\\images\\staffImg.svg",
+      "specialties": "[\"Swedish Massage\",\"Deep Tissue Massage\",\"Hot Stone Massage\",\"Aromatherapy\"]",
+      "rating": 4,
+      "reviewCount": 1,
+      "nextAvailable": null,
+      "isActive": true,
+      "createdAt": "2025-07-29T19:15:39.321Z",
+      "updatedAt": "2025-07-30T15:23:45.481Z",
+      "staffServices": [
+        {
+          "id": "sarah-swedish-massage",
+          "staffId": "sarah",
+          "serviceId": "swedish-massage",
+          "createdAt": "2025-07-29T19:58:32.736Z",
+          "service": {
+            "id": "swedish-massage",
+            "name": "Swedish Massage",
+            "slug": "swedish-massage",
+            "description": "Relaxing full-body massage with gentle strokes",
+            "price": "15,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.373Z",
+            "updatedAt": "2025-07-29T20:06:07.579Z"
+          }
+        },
+        {
+          "id": "sarah-hot-stone-massage",
+          "staffId": "sarah",
+          "serviceId": "hot-stone-massage",
+          "createdAt": "2025-07-29T19:58:32.740Z",
+          "service": {
+            "id": "hot-stone-massage",
+            "name": "Hot Stone Massage",
+            "slug": "hot-stone-massage",
+            "description": "Massage using heated stones for deep relaxation",
+            "price": "20,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.400Z",
+            "updatedAt": "2025-07-29T20:06:07.603Z"
+          }
+        },
+        {
+          "id": "sarah-aromatherapy-massage",
+          "staffId": "sarah",
+          "serviceId": "aromatherapy-massage",
+          "createdAt": "2025-07-29T19:58:32.745Z",
+          "service": {
+            "id": "aromatherapy-massage",
+            "name": "Aromatherapy Massage",
+            "slug": "aromatherapy-massage",
+            "description": "Relaxing massage with essential oils",
+            "price": "16,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.406Z",
+            "updatedAt": "2025-07-29T20:06:07.608Z"
+          }
+        },
+        {
+          "id": "sarah-prenatal-massage",
+          "staffId": "sarah",
+          "serviceId": "prenatal-massage",
+          "createdAt": "2025-07-29T19:58:32.749Z",
+          "service": {
+            "id": "prenatal-massage",
+            "name": "Prenatal Massage",
+            "slug": "prenatal-massage",
+            "description": "Safe and gentle massage for expectant mothers",
+            "price": "17,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.412Z",
+            "updatedAt": "2025-07-29T20:06:07.614Z"
+          }
+        },
+        {
+          "id": "sarah-sports-massage",
+          "staffId": "sarah",
+          "serviceId": "sports-massage",
+          "createdAt": "2025-07-29T19:58:32.754Z",
+          "service": {
+            "id": "sports-massage",
+            "name": "Sports Massage",
+            "slug": "sports-massage",
+            "description": "Recovery and performance massage for athletes",
+            "price": "19,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.418Z",
+            "updatedAt": "2025-07-29T20:06:07.618Z"
+          }
+        },
+        {
+          "id": "sarah-reflexology",
+          "staffId": "sarah",
+          "serviceId": "reflexology",
+          "createdAt": "2025-07-29T19:58:32.758Z",
+          "service": {
+            "id": "reflexology",
+            "name": "Reflexology",
+            "slug": "reflexology",
+            "description": "Therapeutic foot massage targeting pressure points",
+            "price": "12,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.428Z",
+            "updatedAt": "2025-07-29T20:06:07.623Z"
+          }
+        },
+        {
+          "id": "sarah-couples-massage",
+          "staffId": "sarah",
+          "serviceId": "couples-massage",
+          "createdAt": "2025-07-29T19:58:32.763Z",
+          "service": {
+            "id": "couples-massage",
+            "name": "Couples Massage",
+            "slug": "couples-massage",
+            "description": "Relaxing massage session for two",
+            "price": "30,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.433Z",
+            "updatedAt": "2025-07-29T20:06:07.627Z"
+          }
+        },
+        {
+          "id": "sarah-chair-massage",
+          "staffId": "sarah",
+          "serviceId": "chair-massage",
+          "createdAt": "2025-07-29T19:58:32.767Z",
+          "service": {
+            "id": "chair-massage",
+            "name": "Chair Massage",
+            "slug": "chair-massage",
+            "description": "Quick relaxation massage while seated",
+            "price": "8,000 RWF",
+            "duration": "20 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.438Z",
+            "updatedAt": "2025-07-29T20:06:07.632Z"
+          }
+        },
+        {
+          "id": "sarah-thai-massage",
+          "staffId": "sarah",
+          "serviceId": "thai-massage",
+          "createdAt": "2025-07-29T19:58:32.772Z",
+          "service": {
+            "id": "thai-massage",
+            "name": "Thai Massage",
+            "slug": "thai-massage",
+            "description": "Traditional stretching and pressure point massage",
+            "price": "18,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.443Z",
+            "updatedAt": "2025-07-29T20:06:07.637Z"
+          }
+        },
+        {
+          "id": "sarah-relaxmassage",
+          "staffId": "sarah",
+          "serviceId": "relaxmassage",
+          "createdAt": "2025-07-29T19:58:32.776Z",
+          "service": {
+            "id": "relaxmassage",
+            "name": "Relaxation Massage",
+            "slug": "relaxation-massage",
+            "description": "Gentle relaxing full-body massage",
+            "price": "15,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:58:32.448Z",
+            "updatedAt": "2025-07-29T20:06:07.642Z"
+          }
+        },
+        {
+          "id": "sarah-deepmassage",
+          "staffId": "sarah",
+          "serviceId": "deepmassage",
+          "createdAt": "2025-07-29T19:58:32.781Z",
+          "service": {
+            "id": "deepmassage",
+            "name": "Deep Tissue Massage",
+            "slug": "deep-tissue-massage",
+            "description": "Therapeutic deep tissue massage",
+            "price": "18,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/massageIcon.svg",
+            "categoryId": "massage",
+            "createdAt": "2025-07-29T19:15:39.305Z",
+            "updatedAt": "2025-07-29T20:06:07.647Z"
+          }
+        }
+      ],
+      "availability": [
+        {
+          "id": "sarah-monday",
+          "staffId": "sarah",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.374Z",
+          "updatedAt": "2025-07-29T19:15:39.374Z"
+        },
+        {
+          "id": "sarah-tuesday",
+          "staffId": "sarah",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.378Z",
+          "updatedAt": "2025-07-29T19:15:39.378Z"
+        },
+        {
+          "id": "sarah-wednesday",
+          "staffId": "sarah",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.381Z",
+          "updatedAt": "2025-07-29T19:15:39.381Z"
+        },
+        {
+          "id": "sarah-thursday",
+          "staffId": "sarah",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.386Z",
+          "updatedAt": "2025-07-29T19:15:39.386Z"
+        },
+        {
+          "id": "sarah-friday",
+          "staffId": "sarah",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.390Z",
+          "updatedAt": "2025-07-29T19:15:39.390Z"
+        }
+      ]
+    },
+    {
+      "id": "mike",
+      "name": "Mike Thompson",
+      "title": "Senior Hair Stylist",
+      "bio": "Mike is a creative hair stylist with 10+ years experience in cutting, coloring, and styling for all hair types.",
+      "email": "mike@rootsandcrown.rw",
+      "phone": "+250-788-234-567",
+      "image": "\\images\\staffImg.svg",
+      "specialties": "[\"Hair Cutting\",\"Hair Coloring\",\"Balayage\",\"Keratin Treatments\"]",
+      "rating": 4.8,
+      "reviewCount": 98,
+      "nextAvailable": null,
+      "isActive": true,
+      "createdAt": "2025-07-29T19:15:39.325Z",
+      "updatedAt": "2025-07-30T15:23:45.481Z",
+      "staffServices": [
+        {
+          "id": "mike-haircut-styling-new",
+          "staffId": "mike",
+          "serviceId": "haircut-styling-new",
+          "createdAt": "2025-07-29T19:58:32.785Z",
+          "service": {
+            "id": "haircut-styling-new",
+            "name": "Haircut & Styling",
+            "slug": "haircut-styling-new",
+            "description": "Professional cut and style for all hair types",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.605Z",
+            "updatedAt": "2025-07-29T20:06:07.801Z"
+          }
+        },
+        {
+          "id": "mike-hair-coloring-new",
+          "staffId": "mike",
+          "serviceId": "hair-coloring-new",
+          "createdAt": "2025-07-29T19:58:32.789Z",
+          "service": {
+            "id": "hair-coloring-new",
+            "name": "Hair Coloring",
+            "slug": "hair-coloring-new",
+            "description": "Full or partial hair color application",
+            "price": "25,000 RWF",
+            "duration": "120 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.609Z",
+            "updatedAt": "2025-07-29T20:06:07.806Z"
+          }
+        },
+        {
+          "id": "mike-highlights",
+          "staffId": "mike",
+          "serviceId": "highlights",
+          "createdAt": "2025-07-29T19:58:32.793Z",
+          "service": {
+            "id": "highlights",
+            "name": "Hair Highlights",
+            "slug": "highlights",
+            "description": "Professional highlighting service",
+            "price": "20,000 RWF",
+            "duration": "90 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.614Z",
+            "updatedAt": "2025-07-29T20:06:07.810Z"
+          }
+        },
+        {
+          "id": "mike-balayage",
+          "staffId": "mike",
+          "serviceId": "balayage",
+          "createdAt": "2025-07-29T19:58:32.797Z",
+          "service": {
+            "id": "balayage",
+            "name": "Balayage",
+            "slug": "balayage",
+            "description": "Hand-painted natural hair highlighting",
+            "price": "30,000 RWF",
+            "duration": "150 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.618Z",
+            "updatedAt": "2025-07-29T20:06:07.815Z"
+          }
+        },
+        {
+          "id": "mike-hair-treatment-new",
+          "staffId": "mike",
+          "serviceId": "hair-treatment-new",
+          "createdAt": "2025-07-29T19:58:32.801Z",
+          "service": {
+            "id": "hair-treatment-new",
+            "name": "Deep Hair Treatment",
+            "slug": "hair-treatment-new",
+            "description": "Intensive conditioning and repair treatment",
+            "price": "15,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.623Z",
+            "updatedAt": "2025-07-29T20:06:07.819Z"
+          }
+        },
+        {
+          "id": "mike-keratin-treatment",
+          "staffId": "mike",
+          "serviceId": "keratin-treatment",
+          "createdAt": "2025-07-29T19:58:32.806Z",
+          "service": {
+            "id": "keratin-treatment",
+            "name": "Keratin Treatment",
+            "slug": "keratin-treatment",
+            "description": "Smoothing and strengthening hair treatment",
+            "price": "40,000 RWF",
+            "duration": "180 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.627Z",
+            "updatedAt": "2025-07-29T20:06:07.823Z"
+          }
+        },
+        {
+          "id": "mike-hair-extensions",
+          "staffId": "mike",
+          "serviceId": "hair-extensions",
+          "createdAt": "2025-07-29T19:58:32.810Z",
+          "service": {
+            "id": "hair-extensions",
+            "name": "Hair Extensions",
+            "slug": "hair-extensions",
+            "description": "Professional hair extension application",
+            "price": "35,000 RWF",
+            "duration": "120 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.631Z",
+            "updatedAt": "2025-07-29T20:06:07.828Z"
+          }
+        },
+        {
+          "id": "mike-bridal-hair",
+          "staffId": "mike",
+          "serviceId": "bridal-hair",
+          "createdAt": "2025-07-29T19:58:32.814Z",
+          "service": {
+            "id": "bridal-hair",
+            "name": "Bridal Hair Styling",
+            "slug": "bridal-hair",
+            "description": "Special occasion hair styling",
+            "price": "25,000 RWF",
+            "duration": "90 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.636Z",
+            "updatedAt": "2025-07-29T20:06:07.832Z"
+          }
+        },
+        {
+          "id": "mike-hair-wash-blowdry",
+          "staffId": "mike",
+          "serviceId": "hair-wash-blowdry",
+          "createdAt": "2025-07-29T19:58:32.818Z",
+          "service": {
+            "id": "hair-wash-blowdry",
+            "name": "Wash & Blow Dry",
+            "slug": "hair-wash-blowdry",
+            "description": "Professional hair washing and styling",
+            "price": "8,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.640Z",
+            "updatedAt": "2025-07-29T20:06:07.837Z"
+          }
+        },
+        {
+          "id": "mike-scalp-treatment",
+          "staffId": "mike",
+          "serviceId": "scalp-treatment",
+          "createdAt": "2025-07-29T19:58:32.823Z",
+          "service": {
+            "id": "scalp-treatment",
+            "name": "Scalp Treatment",
+            "slug": "scalp-treatment",
+            "description": "Therapeutic scalp care and massage",
+            "price": "12,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.645Z",
+            "updatedAt": "2025-07-29T20:06:07.842Z"
+          }
+        },
+        {
+          "id": "mike-haircut",
+          "staffId": "mike",
+          "serviceId": "haircut",
+          "createdAt": "2025-07-29T19:58:32.826Z",
+          "service": {
+            "id": "haircut",
+            "name": "Hair Cut & Styling",
+            "slug": "haircut",
+            "description": "Professional haircut and styling",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.649Z",
+            "updatedAt": "2025-07-29T20:06:07.846Z"
+          }
+        },
+        {
+          "id": "mike-haircolor",
+          "staffId": "mike",
+          "serviceId": "haircolor",
+          "createdAt": "2025-07-29T19:58:32.831Z",
+          "service": {
+            "id": "haircolor",
+            "name": "Hair Coloring",
+            "slug": "haircolor",
+            "description": "Professional hair coloring service",
+            "price": "25,000 RWF",
+            "duration": "120 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.653Z",
+            "updatedAt": "2025-07-29T20:06:07.851Z"
+          }
+        },
+        {
+          "id": "mike-hairtreatment",
+          "staffId": "mike",
+          "serviceId": "hairtreatment",
+          "createdAt": "2025-07-29T19:58:32.835Z",
+          "service": {
+            "id": "hairtreatment",
+            "name": "Hair Treatment",
+            "slug": "hairtreatment",
+            "description": "Deep conditioning hair treatment",
+            "price": "15,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/hairIcon.svg",
+            "categoryId": "hair",
+            "createdAt": "2025-07-29T19:58:32.658Z",
+            "updatedAt": "2025-07-29T20:06:07.856Z"
+          }
+        }
+      ],
+      "availability": [
+        {
+          "id": "mike-monday",
+          "staffId": "mike",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.393Z",
+          "updatedAt": "2025-07-29T19:15:39.393Z"
+        },
+        {
+          "id": "mike-tuesday",
+          "staffId": "mike",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.397Z",
+          "updatedAt": "2025-07-29T19:15:39.397Z"
+        },
+        {
+          "id": "mike-wednesday",
+          "staffId": "mike",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.401Z",
+          "updatedAt": "2025-07-29T19:15:39.401Z"
+        },
+        {
+          "id": "mike-thursday",
+          "staffId": "mike",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.405Z",
+          "updatedAt": "2025-07-29T19:15:39.405Z"
+        },
+        {
+          "id": "mike-friday",
+          "staffId": "mike",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.409Z",
+          "updatedAt": "2025-07-29T19:15:39.409Z"
+        }
+      ]
+    },
+    {
+      "id": "lisa",
+      "name": "Lisa Chen",
+      "title": "Nail Specialist",
+      "bio": "Lisa specializes in nail care and artistic nail designs with 6 years of professional experience.",
+      "email": "lisa@rootsandcrown.rw",
+      "phone": "+250-788-345-678",
+      "image": "\\images\\staffImg.svg",
+      "specialties": "[\"Manicures\",\"Pedicures\",\"Gel Nails\",\"Nail Art\"]",
+      "rating": 4.9,
+      "reviewCount": 156,
+      "nextAvailable": null,
+      "isActive": true,
+      "createdAt": "2025-07-29T19:15:39.330Z",
+      "updatedAt": "2025-07-30T15:23:45.481Z",
+      "staffServices": [
+        {
+          "id": "lisa-classic-manicure-new",
+          "staffId": "lisa",
+          "serviceId": "classic-manicure-new",
+          "createdAt": "2025-07-29T19:58:32.839Z",
+          "service": {
+            "id": "classic-manicure-new",
+            "name": "Classic Manicure",
+            "slug": "classic-manicure-new",
+            "description": "Traditional nail care and polish application",
+            "price": "8,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.548Z",
+            "updatedAt": "2025-07-29T20:06:07.743Z"
+          }
+        },
+        {
+          "id": "lisa-gel-manicure-new",
+          "staffId": "lisa",
+          "serviceId": "gel-manicure-new",
+          "createdAt": "2025-07-29T19:58:32.843Z",
+          "service": {
+            "id": "gel-manicure-new",
+            "name": "Gel Manicure",
+            "slug": "gel-manicure-new",
+            "description": "Long-lasting gel polish manicure",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.552Z",
+            "updatedAt": "2025-07-29T20:06:07.748Z"
+          }
+        },
+        {
+          "id": "lisa-french-manicure",
+          "staffId": "lisa",
+          "serviceId": "french-manicure",
+          "createdAt": "2025-07-29T19:58:32.847Z",
+          "service": {
+            "id": "french-manicure",
+            "name": "French Manicure",
+            "slug": "french-manicure",
+            "description": "Classic French tip nail styling",
+            "price": "10,000 RWF",
+            "duration": "50 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.556Z",
+            "updatedAt": "2025-07-29T20:06:07.752Z"
+          }
+        },
+        {
+          "id": "lisa-nail-art",
+          "staffId": "lisa",
+          "serviceId": "nail-art",
+          "createdAt": "2025-07-29T19:58:32.851Z",
+          "service": {
+            "id": "nail-art",
+            "name": "Nail Art Design",
+            "slug": "nail-art",
+            "description": "Custom creative nail art and designs",
+            "price": "15,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.560Z",
+            "updatedAt": "2025-07-29T20:06:07.757Z"
+          }
+        },
+        {
+          "id": "lisa-classic-pedicure-new",
+          "staffId": "lisa",
+          "serviceId": "classic-pedicure-new",
+          "createdAt": "2025-07-29T19:58:32.855Z",
+          "service": {
+            "id": "classic-pedicure-new",
+            "name": "Classic Pedicure",
+            "slug": "classic-pedicure-new",
+            "description": "Complete foot care and nail treatment",
+            "price": "10,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.565Z",
+            "updatedAt": "2025-07-29T20:06:07.762Z"
+          }
+        },
+        {
+          "id": "lisa-spa-pedicure",
+          "staffId": "lisa",
+          "serviceId": "spa-pedicure",
+          "createdAt": "2025-07-29T19:58:32.859Z",
+          "service": {
+            "id": "spa-pedicure",
+            "name": "Spa Pedicure",
+            "slug": "spa-pedicure",
+            "description": "Luxurious foot treatment with massage",
+            "price": "15,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.569Z",
+            "updatedAt": "2025-07-29T20:06:07.766Z"
+          }
+        },
+        {
+          "id": "lisa-gel-pedicure",
+          "staffId": "lisa",
+          "serviceId": "gel-pedicure",
+          "createdAt": "2025-07-29T19:58:32.864Z",
+          "service": {
+            "id": "gel-pedicure",
+            "name": "Gel Pedicure",
+            "slug": "gel-pedicure",
+            "description": "Long-lasting gel polish pedicure",
+            "price": "14,000 RWF",
+            "duration": "70 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.573Z",
+            "updatedAt": "2025-07-29T20:06:07.770Z"
+          }
+        },
+        {
+          "id": "lisa-paraffin-treatment",
+          "staffId": "lisa",
+          "serviceId": "paraffin-treatment",
+          "createdAt": "2025-07-29T19:58:32.868Z",
+          "service": {
+            "id": "paraffin-treatment",
+            "name": "Paraffin Hand/Foot Treatment",
+            "slug": "paraffin-treatment",
+            "description": "Moisturizing paraffin wax treatment",
+            "price": "8,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.578Z",
+            "updatedAt": "2025-07-29T20:06:07.775Z"
+          }
+        },
+        {
+          "id": "lisa-callus-removal",
+          "staffId": "lisa",
+          "serviceId": "callus-removal",
+          "createdAt": "2025-07-29T19:58:32.876Z",
+          "service": {
+            "id": "callus-removal",
+            "name": "Callus Removal",
+            "slug": "callus-removal",
+            "description": "Professional callus and dead skin removal",
+            "price": "6,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.582Z",
+            "updatedAt": "2025-07-29T20:06:07.779Z"
+          }
+        },
+        {
+          "id": "lisa-nail-repair",
+          "staffId": "lisa",
+          "serviceId": "nail-repair",
+          "createdAt": "2025-07-29T19:58:32.880Z",
+          "service": {
+            "id": "nail-repair",
+            "name": "Nail Repair",
+            "slug": "nail-repair",
+            "description": "Treatment for damaged or broken nails",
+            "price": "5,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.587Z",
+            "updatedAt": "2025-07-29T20:06:07.783Z"
+          }
+        },
+        {
+          "id": "lisa-manicure",
+          "staffId": "lisa",
+          "serviceId": "manicure",
+          "createdAt": "2025-07-29T19:58:32.885Z",
+          "service": {
+            "id": "manicure",
+            "name": "Classic Manicure",
+            "slug": "manicure",
+            "description": "Professional nail care and polish",
+            "price": "8,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.592Z",
+            "updatedAt": "2025-07-29T20:06:07.788Z"
+          }
+        },
+        {
+          "id": "lisa-gelmanicure",
+          "staffId": "lisa",
+          "serviceId": "gelmanicure",
+          "createdAt": "2025-07-29T19:58:32.889Z",
+          "service": {
+            "id": "gelmanicure",
+            "name": "Gel Manicure",
+            "slug": "gel-manicure",
+            "description": "Long-lasting gel polish",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.596Z",
+            "updatedAt": "2025-07-29T20:06:07.792Z"
+          }
+        },
+        {
+          "id": "lisa-pedicure",
+          "staffId": "lisa",
+          "serviceId": "pedicure",
+          "createdAt": "2025-07-29T19:58:32.894Z",
+          "service": {
+            "id": "pedicure",
+            "name": "Classic Pedicure",
+            "slug": "pedicure",
+            "description": "Complete foot care treatment",
+            "price": "10,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/nailsIcon.svg",
+            "categoryId": "nails",
+            "createdAt": "2025-07-29T19:58:32.600Z",
+            "updatedAt": "2025-07-29T20:06:07.797Z"
+          }
+        }
+      ],
+      "availability": [
+        {
+          "id": "lisa-monday",
+          "staffId": "lisa",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.417Z",
+          "updatedAt": "2025-07-29T19:15:39.417Z"
+        },
+        {
+          "id": "lisa-tuesday",
+          "staffId": "lisa",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.421Z",
+          "updatedAt": "2025-07-29T19:15:39.421Z"
+        },
+        {
+          "id": "lisa-wednesday",
+          "staffId": "lisa",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.424Z",
+          "updatedAt": "2025-07-29T19:15:39.424Z"
+        },
+        {
+          "id": "lisa-thursday",
+          "staffId": "lisa",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.428Z",
+          "updatedAt": "2025-07-29T19:15:39.428Z"
+        },
+        {
+          "id": "lisa-friday",
+          "staffId": "lisa",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.431Z",
+          "updatedAt": "2025-07-29T19:15:39.431Z"
+        }
+      ]
+    },
+    {
+      "id": "anna",
+      "name": "Anna Williams",
+      "title": "Esthetician & Body Treatment Specialist",
+      "bio": "Anna is a licensed esthetician specializing in facial treatments and body therapies with 7 years experience.",
+      "email": "anna@rootsandcrown.rw",
+      "phone": "+250-788-456-789",
+      "image": "\\images\\staffImg.svg",
+      "specialties": "[\"Facials\",\"Body Treatments\",\"Skincare\",\"Anti-Aging\"]",
+      "rating": 4,
+      "reviewCount": 1,
+      "nextAvailable": null,
+      "isActive": true,
+      "createdAt": "2025-07-29T19:15:39.334Z",
+      "updatedAt": "2025-07-30T15:39:47.470Z",
+      "staffServices": [
+        {
+          "id": "anna-classic-facial",
+          "staffId": "anna",
+          "serviceId": "classic-facial",
+          "createdAt": "2025-07-29T19:58:32.898Z",
+          "service": {
+            "id": "classic-facial",
+            "name": "Classic Facial",
+            "slug": "classic-facial-treatment",
+            "description": "Deep cleansing and moisturizing facial treatment",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.456Z",
+            "updatedAt": "2025-07-29T20:06:07.651Z"
+          }
+        },
+        {
+          "id": "anna-anti-aging-facial",
+          "staffId": "anna",
+          "serviceId": "anti-aging-facial",
+          "createdAt": "2025-07-29T19:58:32.902Z",
+          "service": {
+            "id": "anti-aging-facial",
+            "name": "Anti-Aging Facial",
+            "slug": "anti-aging-facial",
+            "description": "Advanced treatment targeting signs of aging",
+            "price": "18,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.461Z",
+            "updatedAt": "2025-07-29T20:06:07.655Z"
+          }
+        },
+        {
+          "id": "anna-acne-treatment",
+          "staffId": "anna",
+          "serviceId": "acne-treatment",
+          "createdAt": "2025-07-29T19:58:32.907Z",
+          "service": {
+            "id": "acne-treatment",
+            "name": "Acne Treatment Facial",
+            "slug": "acne-treatment",
+            "description": "Specialized treatment for acne-prone skin",
+            "price": "15,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.466Z",
+            "updatedAt": "2025-07-29T20:06:07.660Z"
+          }
+        },
+        {
+          "id": "anna-hydrating-facial",
+          "staffId": "anna",
+          "serviceId": "hydrating-facial",
+          "createdAt": "2025-07-29T19:58:32.911Z",
+          "service": {
+            "id": "hydrating-facial",
+            "name": "Hydrating Facial",
+            "slug": "hydrating-facial",
+            "description": "Intensive moisture restoration treatment",
+            "price": "14,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.470Z",
+            "updatedAt": "2025-07-29T20:06:07.664Z"
+          }
+        },
+        {
+          "id": "anna-brightening-facial",
+          "staffId": "anna",
+          "serviceId": "brightening-facial",
+          "createdAt": "2025-07-29T19:58:32.915Z",
+          "service": {
+            "id": "brightening-facial",
+            "name": "Brightening Facial",
+            "slug": "brightening-facial",
+            "description": "Treatment to even skin tone and add radiance",
+            "price": "16,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.475Z",
+            "updatedAt": "2025-07-29T20:06:07.669Z"
+          }
+        },
+        {
+          "id": "anna-sensitive-skin-facial",
+          "staffId": "anna",
+          "serviceId": "sensitive-skin-facial",
+          "createdAt": "2025-07-29T19:58:32.919Z",
+          "service": {
+            "id": "sensitive-skin-facial",
+            "name": "Sensitive Skin Facial",
+            "slug": "sensitive-skin-facial",
+            "description": "Gentle treatment for delicate skin",
+            "price": "13,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.480Z",
+            "updatedAt": "2025-07-29T20:06:07.674Z"
+          }
+        },
+        {
+          "id": "anna-microdermabrasion",
+          "staffId": "anna",
+          "serviceId": "microdermabrasion",
+          "createdAt": "2025-07-29T19:58:32.923Z",
+          "service": {
+            "id": "microdermabrasion",
+            "name": "Microdermabrasion",
+            "slug": "microdermabrasion",
+            "description": "Exfoliating treatment for smooth skin",
+            "price": "20,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.484Z",
+            "updatedAt": "2025-07-29T20:06:07.679Z"
+          }
+        },
+        {
+          "id": "anna-chemical-peel",
+          "staffId": "anna",
+          "serviceId": "chemical-peel",
+          "createdAt": "2025-07-29T19:58:32.927Z",
+          "service": {
+            "id": "chemical-peel",
+            "name": "Chemical Peel",
+            "slug": "chemical-peel",
+            "description": "Professional skin resurfacing treatment",
+            "price": "25,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.489Z",
+            "updatedAt": "2025-07-29T20:06:07.684Z"
+          }
+        },
+        {
+          "id": "anna-oxygen-facial",
+          "staffId": "anna",
+          "serviceId": "oxygen-facial",
+          "createdAt": "2025-07-29T19:58:32.931Z",
+          "service": {
+            "id": "oxygen-facial",
+            "name": "Oxygen Facial",
+            "slug": "oxygen-facial",
+            "description": "Rejuvenating treatment with oxygen infusion",
+            "price": "22,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.493Z",
+            "updatedAt": "2025-07-29T20:06:07.688Z"
+          }
+        },
+        {
+          "id": "anna-eyebrow-shaping",
+          "staffId": "anna",
+          "serviceId": "eyebrow-shaping",
+          "createdAt": "2025-07-29T19:58:32.936Z",
+          "service": {
+            "id": "eyebrow-shaping",
+            "name": "Eyebrow Shaping",
+            "slug": "eyebrow-shaping",
+            "description": "Professional eyebrow sculpting and shaping",
+            "price": "5,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.497Z",
+            "updatedAt": "2025-07-29T20:06:07.692Z"
+          }
+        },
+        {
+          "id": "anna-classicfacial",
+          "staffId": "anna",
+          "serviceId": "classicfacial",
+          "createdAt": "2025-07-29T19:58:32.940Z",
+          "service": {
+            "id": "classicfacial",
+            "name": "Classic Facial",
+            "slug": "classic-facial-service",
+            "description": "Traditional deep cleansing facial",
+            "price": "12,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.502Z",
+            "updatedAt": "2025-07-29T20:06:07.697Z"
+          }
+        },
+        {
+          "id": "anna-deepfacial",
+          "staffId": "anna",
+          "serviceId": "deepfacial",
+          "createdAt": "2025-07-29T19:58:32.944Z",
+          "service": {
+            "id": "deepfacial",
+            "name": "Deep Cleansing Facial",
+            "slug": "deep-cleansing-facial",
+            "description": "Intensive deep cleansing treatment",
+            "price": "14,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/skinIcon.svg",
+            "categoryId": "skincare",
+            "createdAt": "2025-07-29T19:58:32.506Z",
+            "updatedAt": "2025-07-29T20:06:07.702Z"
+          }
+        },
+        {
+          "id": "anna-body-scrub",
+          "staffId": "anna",
+          "serviceId": "body-scrub",
+          "createdAt": "2025-07-29T19:58:32.948Z",
+          "service": {
+            "id": "body-scrub",
+            "name": "Full Body Scrub",
+            "slug": "body-scrub",
+            "description": "Exfoliating treatment for smooth, soft skin",
+            "price": "15,000 RWF",
+            "duration": "45 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.510Z",
+            "updatedAt": "2025-07-29T20:06:07.707Z"
+          }
+        },
+        {
+          "id": "anna-body-wrap",
+          "staffId": "anna",
+          "serviceId": "body-wrap",
+          "createdAt": "2025-07-29T19:58:32.951Z",
+          "service": {
+            "id": "body-wrap",
+            "name": "Body Wrap",
+            "slug": "body-wrap",
+            "description": "Detoxifying and moisturizing body treatment",
+            "price": "20,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.515Z",
+            "updatedAt": "2025-07-29T20:06:07.711Z"
+          }
+        },
+        {
+          "id": "anna-cellulite-treatment",
+          "staffId": "anna",
+          "serviceId": "cellulite-treatment",
+          "createdAt": "2025-07-29T19:58:32.956Z",
+          "service": {
+            "id": "cellulite-treatment",
+            "name": "Cellulite Treatment",
+            "slug": "cellulite-treatment",
+            "description": "Specialized treatment targeting cellulite",
+            "price": "25,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.519Z",
+            "updatedAt": "2025-07-29T20:06:07.716Z"
+          }
+        },
+        {
+          "id": "anna-back-facial",
+          "staffId": "anna",
+          "serviceId": "back-facial",
+          "createdAt": "2025-07-29T19:58:32.960Z",
+          "service": {
+            "id": "back-facial",
+            "name": "Back Facial",
+            "slug": "back-facial",
+            "description": "Deep cleansing treatment for back skin",
+            "price": "18,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.525Z",
+            "updatedAt": "2025-07-29T20:06:07.720Z"
+          }
+        },
+        {
+          "id": "anna-sunless-tanning",
+          "staffId": "anna",
+          "serviceId": "sunless-tanning",
+          "createdAt": "2025-07-29T19:58:32.964Z",
+          "service": {
+            "id": "sunless-tanning",
+            "name": "Sunless Tanning",
+            "slug": "sunless-tanning",
+            "description": "Professional spray tan application",
+            "price": "12,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.529Z",
+            "updatedAt": "2025-07-29T20:06:07.725Z"
+          }
+        },
+        {
+          "id": "anna-body-contouring",
+          "staffId": "anna",
+          "serviceId": "body-contouring",
+          "createdAt": "2025-07-29T19:58:32.968Z",
+          "service": {
+            "id": "body-contouring",
+            "name": "Body Contouring",
+            "slug": "body-contouring",
+            "description": "Non-invasive body shaping treatment",
+            "price": "30,000 RWF",
+            "duration": "90 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.534Z",
+            "updatedAt": "2025-07-29T20:06:07.729Z"
+          }
+        },
+        {
+          "id": "anna-stretch-mark-treatment",
+          "staffId": "anna",
+          "serviceId": "stretch-mark-treatment",
+          "createdAt": "2025-07-29T19:58:32.971Z",
+          "service": {
+            "id": "stretch-mark-treatment",
+            "name": "Stretch Mark Treatment",
+            "slug": "stretch-mark-treatment",
+            "description": "Specialized treatment for stretch marks",
+            "price": "22,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.538Z",
+            "updatedAt": "2025-07-29T20:06:07.734Z"
+          }
+        },
+        {
+          "id": "anna-detox-treatment",
+          "staffId": "anna",
+          "serviceId": "detox-treatment",
+          "createdAt": "2025-07-29T19:58:32.976Z",
+          "service": {
+            "id": "detox-treatment",
+            "name": "Detox Treatment",
+            "slug": "detox-treatment",
+            "description": "Full body detoxification therapy",
+            "price": "25,000 RWF",
+            "duration": "75 minutes",
+            "image": "/images/BodyIcon.svg",
+            "categoryId": "body",
+            "createdAt": "2025-07-29T19:58:32.543Z",
+            "updatedAt": "2025-07-29T20:06:07.738Z"
+          }
+        }
+      ],
+      "availability": [
+        {
+          "id": "anna-monday",
+          "staffId": "anna",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.435Z",
+          "updatedAt": "2025-07-29T19:15:39.435Z"
+        },
+        {
+          "id": "anna-tuesday",
+          "staffId": "anna",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.439Z",
+          "updatedAt": "2025-07-29T19:15:39.439Z"
+        },
+        {
+          "id": "anna-wednesday",
+          "staffId": "anna",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.442Z",
+          "updatedAt": "2025-07-29T19:15:39.442Z"
+        },
+        {
+          "id": "anna-thursday",
+          "staffId": "anna",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.446Z",
+          "updatedAt": "2025-07-29T19:15:39.446Z"
+        },
+        {
+          "id": "anna-friday",
+          "staffId": "anna",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isActive": true,
+          "createdAt": "2025-07-29T19:15:39.449Z",
+          "updatedAt": "2025-07-29T19:15:39.449Z"
+        }
+      ]
+    },
+    {
+      "id": "john",
+      "name": "John Davis",
+      "title": "Tattoo Artist & Piercing Specialist",
+      "bio": "John is a professional tattoo artist and piercer with 12 years experience in custom designs and body art.",
+      "email": "john@rootsandcrown.rw",
+      "phone": "+250-788-567-890",
+      "image": "\\images\\staffImg.svg",
+      "specialties": "[\"Tattoo Design\",\"Body Piercing\",\"Custom Art\",\"Consultations\"]",
+      "rating": 4.9,
+      "reviewCount": 203,
+      "nextAvailable": null,
+      "isActive": true,
+      "createdAt": "2025-07-29T19:58:32.730Z",
+      "updatedAt": "2025-07-30T15:23:45.481Z",
+      "staffServices": [
+        {
+          "id": "john-small-tattoo",
+          "staffId": "john",
+          "serviceId": "small-tattoo",
+          "createdAt": "2025-07-29T19:58:32.981Z",
+          "service": {
+            "id": "small-tattoo",
+            "name": "Small Tattoo",
+            "slug": "small-tattoo",
+            "description": "Custom small tattoo design (up to 3 inches)",
+            "price": "25,000 RWF",
+            "duration": "60 minutes",
+            "image": "/images/tattooIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.663Z",
+            "updatedAt": "2025-07-29T20:06:07.860Z"
+          }
+        },
+        {
+          "id": "john-medium-tattoo",
+          "staffId": "john",
+          "serviceId": "medium-tattoo",
+          "createdAt": "2025-07-29T19:58:32.985Z",
+          "service": {
+            "id": "medium-tattoo",
+            "name": "Medium Tattoo",
+            "slug": "medium-tattoo",
+            "description": "Custom medium tattoo design (3-6 inches)",
+            "price": "50,000 RWF",
+            "duration": "120 minutes",
+            "image": "/images/tattooIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.668Z",
+            "updatedAt": "2025-07-29T20:06:07.864Z"
+          }
+        },
+        {
+          "id": "john-large-tattoo",
+          "staffId": "john",
+          "serviceId": "large-tattoo",
+          "createdAt": "2025-07-29T19:58:32.989Z",
+          "service": {
+            "id": "large-tattoo",
+            "name": "Large Tattoo",
+            "slug": "large-tattoo",
+            "description": "Custom large tattoo design (6+ inches)",
+            "price": "100,000 RWF",
+            "duration": "240 minutes",
+            "image": "/images/tattooIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.673Z",
+            "updatedAt": "2025-07-29T20:06:07.868Z"
+          }
+        },
+        {
+          "id": "john-tattoo-consultation",
+          "staffId": "john",
+          "serviceId": "tattoo-consultation",
+          "createdAt": "2025-07-29T19:58:32.993Z",
+          "service": {
+            "id": "tattoo-consultation",
+            "name": "Tattoo Consultation",
+            "slug": "tattoo-consultation",
+            "description": "Design consultation and planning session",
+            "price": "5,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/tattooIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.677Z",
+            "updatedAt": "2025-07-29T20:06:07.873Z"
+          }
+        },
+        {
+          "id": "john-ear-piercing",
+          "staffId": "john",
+          "serviceId": "ear-piercing",
+          "createdAt": "2025-07-29T19:58:32.997Z",
+          "service": {
+            "id": "ear-piercing",
+            "name": "Ear Piercing",
+            "slug": "ear-piercing",
+            "description": "Professional ear piercing with jewelry",
+            "price": "8,000 RWF",
+            "duration": "15 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.682Z",
+            "updatedAt": "2025-07-29T20:06:07.880Z"
+          }
+        },
+        {
+          "id": "john-nose-piercing",
+          "staffId": "john",
+          "serviceId": "nose-piercing",
+          "createdAt": "2025-07-29T19:58:33.001Z",
+          "service": {
+            "id": "nose-piercing",
+            "name": "Nose Piercing",
+            "slug": "nose-piercing",
+            "description": "Professional nose piercing with jewelry",
+            "price": "10,000 RWF",
+            "duration": "20 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.687Z",
+            "updatedAt": "2025-07-29T20:06:07.887Z"
+          }
+        },
+        {
+          "id": "john-lip-piercing",
+          "staffId": "john",
+          "serviceId": "lip-piercing",
+          "createdAt": "2025-07-29T19:58:33.005Z",
+          "service": {
+            "id": "lip-piercing",
+            "name": "Lip Piercing",
+            "slug": "lip-piercing",
+            "description": "Professional lip piercing with jewelry",
+            "price": "12,000 RWF",
+            "duration": "20 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.691Z",
+            "updatedAt": "2025-07-29T20:06:07.892Z"
+          }
+        },
+        {
+          "id": "john-eyebrow-piercing",
+          "staffId": "john",
+          "serviceId": "eyebrow-piercing",
+          "createdAt": "2025-07-29T19:58:33.009Z",
+          "service": {
+            "id": "eyebrow-piercing",
+            "name": "Eyebrow Piercing",
+            "slug": "eyebrow-piercing",
+            "description": "Professional eyebrow piercing with jewelry",
+            "price": "10,000 RWF",
+            "duration": "20 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.699Z",
+            "updatedAt": "2025-07-29T20:06:07.898Z"
+          }
+        },
+        {
+          "id": "john-body-piercing",
+          "staffId": "john",
+          "serviceId": "body-piercing",
+          "createdAt": "2025-07-29T19:58:33.013Z",
+          "service": {
+            "id": "body-piercing",
+            "name": "Body Piercing",
+            "slug": "body-piercing",
+            "description": "Professional body piercing service",
+            "price": "15,000 RWF",
+            "duration": "30 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.703Z",
+            "updatedAt": "2025-07-29T20:06:07.904Z"
+          }
+        },
+        {
+          "id": "john-piercing-jewelry",
+          "staffId": "john",
+          "serviceId": "piercing-jewelry",
+          "createdAt": "2025-07-29T19:58:33.017Z",
+          "service": {
+            "id": "piercing-jewelry",
+            "name": "Piercing Jewelry Change",
+            "slug": "piercing-jewelry",
+            "description": "Professional jewelry change and care",
+            "price": "3,000 RWF",
+            "duration": "10 minutes",
+            "image": "/images/piercingIcon.svg",
+            "categoryId": "tattoo",
+            "createdAt": "2025-07-29T19:58:32.707Z",
+            "updatedAt": "2025-07-29T20:06:07.910Z"
+          }
+        }
+      ],
+      "availability": []
+    }
+  ],
+  "lastUpdated": "2025-07-30T17:56:13.505Z"
+}
