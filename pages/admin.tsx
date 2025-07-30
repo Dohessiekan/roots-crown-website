@@ -558,8 +558,17 @@ const AdminDashboard: NextPage = () => {
           {/* Bookings Tab */}
           {activeTab === 'bookings' && (
             <div className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold">Recent Bookings</h2>
+              <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                <div>
+                  <h2 className="text-xl font-semibold">All Bookings ({bookings.length})</h2>
+                  <p className="text-sm text-gray-600">Real-time view of all customer bookings</p>
+                </div>
+                <button
+                  onClick={fetchData}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
+                >
+                  🔄 Refresh
+                </button>
               </div>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
@@ -617,6 +626,14 @@ const AdminDashboard: NextPage = () => {
                     ))}
                   </tbody>
                 </table>
+                {bookings.length === 0 && (
+                  <div className="px-6 py-8 text-center">
+                    <div className="text-gray-500">
+                      <p className="text-lg mb-2">📅 No bookings yet</p>
+                      <p>When customers book appointments, they will appear here automatically.</p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}

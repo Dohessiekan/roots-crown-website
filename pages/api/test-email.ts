@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Email test error:', error)
     res.status(500).json({ 
       message: 'Email test failed with exception ❌', 
-      error: error.message 
+      error: error instanceof Error ? error.message : 'Unknown error occurred'
     })
   }
 }
