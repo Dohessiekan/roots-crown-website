@@ -3,7 +3,8 @@ import { GetServerSideProps } from 'next'
 import { useState, useEffect } from 'react'
 import ServiceNavbar from '../../components/ServiceNavbar'
 import Footer from '../../components/Footer'
-import { staffApi, Staff, StaffService } from '../../lib/api'
+import { Staff, StaffService } from '../../lib/api'
+import { PrismaClient } from '@prisma/client'
 
 interface FeedbackData {
   id: string
@@ -505,18 +506,42 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       return { notFound: true }
     }
 
-    // Fetch staff member by ID
-    const allStaff = await staffApi.getAll()
-    const staff = allStaff.find((s: Staff) => s.id === staffId)
+    // Use direct database access instead of HTTP API
+    const prisma = new PrismaClient()
+    
+    try {
+      // Fetch staff member by ID with services
+      const staff = await prisma.staff.findUnique({
+        where: { id: staffId },
+        include: {
+          staffServices: {
+            include: {
+              service: {
+                include: {
+                  category: true
+                }
+              }
+            }
+          }
+        }
+      })
 
-    if (!staff) {
-      return { notFound: true }
-    }
-
-    return {
-      props: {
-        staff
+      if (!staff) {
+        await prisma.$disconnect()
+        return { notFound: true }
       }
+
+      await prisma.$disconnect()
+
+      return {
+        props: {
+          staff: JSON.parse(JSON.stringify(staff))
+        }
+      }
+    } catch (dbError) {
+      console.error('Database error:', dbError)
+      await prisma.$disconnect()
+      return { notFound: true }
     }
   } catch (error) {
     console.error('Error fetching staff data:', error)

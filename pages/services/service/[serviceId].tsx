@@ -4,7 +4,8 @@ import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import Footer from '../../../components/Footer'
 import ServiceNavbar from '../../../components/ServiceNavbar'
-import { servicesApi, staffApi, Service, Staff } from '../../../lib/api'
+import { Service, Staff } from '../../../lib/api'
+import { PrismaClient } from '@prisma/client'
 
 // Utility to slugify service names for URLs
 function slugify(text: string): string {
@@ -172,25 +173,54 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       return { notFound: true }
     }
 
-    // Fetch service by slug (serviceId is actually the slug)
-    const services = await servicesApi.getAll()
-    const service = services.find((s: Service) => slugify(s.name) === serviceId)
+    // Use direct database access instead of HTTP API
+    const prisma = new PrismaClient()
+    
+    try {
+      // Fetch all services to find by slug
+      const services = await prisma.service.findMany({
+        include: {
+          category: true
+        }
+      })
+      
+      const service = services.find((s: any) => slugify(s.name) === serviceId)
 
-    if (!service) {
-      return { notFound: true }
-    }
-
-    // Fetch staff who can perform this service
-    const allStaff = await staffApi.getAll()
-    const availableStaff = allStaff.filter((staff: Staff) => 
-      staff.staffServices?.some((staffService: any) => staffService.serviceId === service.id)
-    )
-
-    return {
-      props: {
-        service,
-        availableStaff
+      if (!service) {
+        await prisma.$disconnect()
+        return { notFound: true }
       }
+
+      // Fetch staff who can perform this service
+      const staffWithServices = await prisma.staff.findMany({
+        include: {
+          staffServices: {
+            where: {
+              serviceId: service.id
+            },
+            include: {
+              service: true
+            }
+          }
+        }
+      })
+
+      const availableStaff = staffWithServices.filter(staff => 
+        staff.staffServices.length > 0
+      )
+
+      await prisma.$disconnect()
+
+      return {
+        props: {
+          service: JSON.parse(JSON.stringify(service)),
+          availableStaff: JSON.parse(JSON.stringify(availableStaff))
+        }
+      }
+    } catch (dbError) {
+      console.error('Database error:', dbError)
+      await prisma.$disconnect()
+      return { notFound: true }
     }
   } catch (error) {
     console.error('Error fetching service data:', error)

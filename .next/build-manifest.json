@@ -10,10 +10,7 @@
     "static/development/_buildManifest.js",
     "static/development/_ssgManifest.js"
   ],
-  "rootMainFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/main-app.js"
-  ],
+  "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
     "/_app": [
@@ -26,10 +23,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/feedback": [
+    "/services/[category]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/feedback.js"
+      "static/chunks/pages/services/[category].js"
+    ],
+    "/services/service/[serviceId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/services/service/[serviceId].js"
     ]
   },
   "ampFirstPages": []
