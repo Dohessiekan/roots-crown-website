@@ -1,0 +1,127 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Category {
+  id          String    @id // Simple IDs like "hair", "nails", "massage"
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  icon        String?
+  services    Service[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Service {
+  id          String    @id // Simple IDs like "haircut", "facial", "manicure"
+  name        String
+  slug        String    @unique
+  description String
+  price       String
+  duration    String
+  image       String?
+  categoryId  String
+  category    Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  staffServices StaffService[]
+  bookings    Booking[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Staff {
+  id            String         @id // Simple IDs like "sarah", "mike", "lisa"
+  name          String
+  title         String
+  bio           String
+  email         String         @unique
+  phone         String?
+  image         String?
+  specialties   String         // JSON array as string
+  rating        Float?         @default(5.0)
+  reviewCount   Int?           @default(0)
+  nextAvailable String?
+  isActive      Boolean        @default(true)
+  staffServices StaffService[]
+  bookings      Booking[]
+  availability  Availability[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model StaffService {
+  id        String  @id // Simple IDs like "sarah-haircut", "mike-massage"
+  staffId   String
+  serviceId String
+  staff     Staff   @relation(fields: [staffId], references: [id], onDelete: Cascade)
+  service   Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([staffId, serviceId])
+}
+
+model Availability {
+  id        String   @id // Simple IDs like "sarah-monday", "mike-tuesday"
+  staffId   String
+  dayOfWeek Int      // 0=Sunday, 1=Monday, etc.
+  startTime String   // "09:00"
+  endTime   String   // "17:00"
+  isActive  Boolean  @default(true)
+  staff     Staff    @relation(fields: [staffId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([staffId, dayOfWeek])
+}
+
+model Booking {
+  id          String        @id @default(cuid())
+  bookingId   String        @unique // 6-digit booking ID for customer reference
+  customerName String
+  customerEmail String
+  customerPhone String?
+  serviceId   String
+  staffId     String
+  staffName   String?       // Staff name for easy viewing
+  appointmentDate DateTime
+  appointmentTime String    // "14:30"
+  status      BookingStatus @default(CONFIRMED)
+  notes       String?
+  totalPrice  String?
+  service     Service       @relation(fields: [serviceId], references: [id])
+  staff       Staff         @relation(fields: [staffId], references: [id])
+  feedback    Feedback?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Feedback {
+  id            String   @id @default(cuid())
+  customerName  String
+  customerEmail String
+  bookingId     String?  @unique
+  booking       Booking? @relation(fields: [bookingId], references: [bookingId])
+  rating        Int      // Overall rating 1-5
+  serviceRating Int      // Service quality rating 1-5
+  staffRating   Int      // Staff performance rating 1-5
+  facilityRating Int     // Facility cleanliness rating 1-5
+  comment       String?
+  wouldRecommend Boolean @default(true)
+  improvementSuggestions String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+enum BookingStatus {
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
