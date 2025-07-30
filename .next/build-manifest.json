@@ -13,11 +13,6 @@
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -28,15 +23,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/services": [
+    "/book/[id]/confirm": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/services.js"
-    ],
-    "/services/[category]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/services/[category].js"
+      "static/chunks/pages/book/[id]/confirm.js"
     ],
     "/services/service/[serviceId]": [
       "static/chunks/webpack.js",

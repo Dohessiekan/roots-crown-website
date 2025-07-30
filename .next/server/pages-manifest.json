@@ -2,11 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/services": "pages/services.js",
   "/services/[category]": "pages/services/[category].js",
   "/services/service/[serviceId]": "pages/services/service/[serviceId].js",
-  "/staff/[id]": "pages/staff/[id].js",
   "/api/availability/[staffId]": "pages/api/availability/[staffId].js",
-  "/api/staff/[id]/feedback": "pages/api/staff/[id]/feedback.js",
-  "/": "pages/index.js"
+  "/api/bookings": "pages/api/bookings.js",
+  "/staff/[id]": "pages/staff/[id].js",
+  "/book/[id]/confirm": "pages/book/[id]/confirm.js"
 }
