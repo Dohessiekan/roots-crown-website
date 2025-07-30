@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && next build && npm run seed",
+    "build": "npx prisma generate && npm run seed && next build",
     "start": "next start",
     "lint": "next lint",
     "images": "node scripts/image-manager.js",

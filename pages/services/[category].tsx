@@ -3,7 +3,26 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import { categoriesApi, servicesApi, Category, Service } from '../../lib/api'
+import { PrismaClient } from '@prisma/client'
+
+interface Category {
+  id: string
+  name: string
+  slug: string
+  description: string | null
+  icon: string | null
+}
+
+interface Service {
+  id: string
+  name: string
+  slug: string
+  description: string
+  price: string
+  duration: string
+  image: string | null
+  categoryId: string
+}
 
 // Utility to slugify service names for URLs
 function slugify(text: string): string {
@@ -162,22 +181,45 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       return { notFound: true }
     }
 
+    const prisma = new PrismaClient()
+
     // Fetch category by slug
-    const categories = await categoriesApi.getAll()
-    const category = categories.find((c: Category) => c.slug === categorySlug)
+    const category = await prisma.category.findUnique({
+      where: { slug: categorySlug }
+    })
 
     if (!category) {
+      await prisma.$disconnect()
       return { notFound: true }
     }
 
     // Fetch services in this category
-    const allServices = await servicesApi.getAll()
-    const services = allServices.filter((service: Service) => service.categoryId === category.id)
+    const services = await prisma.service.findMany({
+      where: { categoryId: category.id },
+      orderBy: { name: 'asc' }
+    })
+
+    await prisma.$disconnect()
 
     return {
       props: {
-        category,
-        services
+        category: {
+          id: category.id,
+          name: category.name,
+          slug: category.slug,
+          description: category.description,
+          icon: category.icon
+        },
+        services: services.map(service => ({
+          id: service.id,
+          name: service.name,
+          slug: service.slug,
+          description: service.description,
+          price: service.price,
+          duration: service.duration,
+          image: service.image,
+          categoryId: service.categoryId
+        }))
       }
     }
   } catch (error) {

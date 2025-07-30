@@ -3,7 +3,15 @@ import Footer from '../components/Footer'
 import ServiceCard from '../components/ServiceCard'
 import Link from 'next/link'
 import { GetServerSideProps } from 'next'
-import { categoriesApi, Category } from '../lib/api'
+import { PrismaClient } from '@prisma/client'
+
+interface Category {
+	id: string
+	name: string
+	slug: string
+	description: string | null
+	icon: string | null
+}
 
 interface ServicesProps {
 	categories: Category[]
@@ -84,17 +92,77 @@ export default function Services({ categories }: ServicesProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
 	try {
-		const categories = await categoriesApi.getAll()
+		const prisma = new PrismaClient()
+		
+		const categories = await prisma.category.findMany({
+			orderBy: { name: 'asc' }
+		})
+		
+		await prisma.$disconnect()
+		
 		return {
 			props: {
-				categories
+				categories: categories.map(cat => ({
+					id: cat.id,
+					name: cat.name,
+					slug: cat.slug,
+					description: cat.description,
+					icon: cat.icon
+				}))
 			}
 		}
 	} catch (error) {
 		console.error('Error fetching categories:', error)
+		
+		// Fallback data if database fails
+		const fallbackCategories = [
+			{
+				id: 'hair',
+				name: 'Hair Services',
+				slug: 'hair-services',
+				description: 'Professional hair styling, cutting, and coloring services',
+				icon: '/images/hairIcon.svg'
+			},
+			{
+				id: 'body',
+				name: 'Body Treatments',
+				slug: 'body-treatments',
+				description: 'Relaxing body treatments and wellness services',
+				icon: '/images/BodyIcon.svg'
+			},
+			{
+				id: 'massage',
+				name: 'Massage Therapy',
+				slug: 'massage-therapy',
+				description: 'Therapeutic and relaxation massage services',
+				icon: '/images/massageIcon.svg'
+			},
+			{
+				id: 'nails',
+				name: 'Nail Services',
+				slug: 'nail-services',
+				description: 'Manicure, pedicure, and nail art services',
+				icon: '/images/nailsIcon.svg'
+			},
+			{
+				id: 'skin',
+				name: 'Skincare',
+				slug: 'skincare',
+				description: 'Facial treatments and skincare services',
+				icon: '/images/skinIcon.svg'
+			},
+			{
+				id: 'makeup',
+				name: 'Makeup Services',
+				slug: 'makeup-services',
+				description: 'Professional makeup application and styling',
+				icon: '/images/makeupIcon.svg'
+			}
+		]
+		
 		return {
 			props: {
-				categories: []
+				categories: fallbackCategories
 			}
 		}
 	}
