@@ -52,37 +52,38 @@ export default function Home({ testimonials }: HomeProps) {
   const fallbackTestimonials = [
     {
       id: 'fallback-1',
-      customerName: 'Aline M.',
+      customerName: 'Sample Client',
       rating: 5,
-      comment: 'Absolutely loved my experience! The staff is so friendly and my hair has never looked better.',
-      serviceName: 'Hair Styling',
-      staffName: 'Our Team',
+      comment: 'This is a sample testimonial. Real client reviews will appear here once feedback is submitted.',
+      serviceName: 'Hair Services',
+      staffName: 'Our Professional Team',
       date: new Date().toISOString(),
       wouldRecommend: true
     },
     {
       id: 'fallback-2',
-      customerName: 'Jean-Paul N.',
+      customerName: 'Demo Customer',
       rating: 5,
-      comment: 'The massage therapy was so relaxing. I left feeling completely renewed. Highly recommend Roots & Crown!',
-      serviceName: 'Massage Therapy',
-      staffName: 'Our Team',
+      comment: 'Sample review placeholder. Actual client testimonials will display when customers leave feedback.',
+      serviceName: 'Spa Services',
+      staffName: 'Our Expert Staff',
       date: new Date().toISOString(),
       wouldRecommend: true
     },
     {
       id: 'fallback-3',
-      customerName: 'Diane K.',
+      customerName: 'Preview Client',
       rating: 5,
-      comment: 'Clean, beautiful space and truly personalized attention. I always feel pampered and valued.',
-      serviceName: 'Facial Treatment',
-      staffName: 'Our Team',
+      comment: 'Placeholder testimonial. Real customer reviews will appear here after service appointments.',
+      serviceName: 'Beauty Services',
+      staffName: 'Our Skilled Team',
       date: new Date().toISOString(),
       wouldRecommend: true
     }
   ]
 
   const displayTestimonials = testimonials.length > 0 ? testimonials.slice(0, 3) : fallbackTestimonials
+  const hasRealTestimonials = testimonials.length > 0
   return (
     <>
       <Navbar />
@@ -233,10 +234,22 @@ export default function Home({ testimonials }: HomeProps) {
                 <h2 className="text-4xl font-heading text-primary-green text-center mb-6">
                   What Our Clients Say
                 </h2>
+                
+                {!hasRealTestimonials && (
+                  <div className="text-center mb-8">
+                    <p className="text-gray-600 italic">
+                      📝 Client testimonials will appear here after customers complete their appointments and leave feedback.
+                    </p>
+                  </div>
+                )}
+                
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                   {displayTestimonials.map((testimonial) => (
-                    <div key={testimonial.id} className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
+                    <div key={testimonial.id} className={`bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto ${!hasRealTestimonials ? 'opacity-75' : ''}`}>
                       <div className="flex items-center mb-4">
+                        {!hasRealTestimonials && (
+                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2">PREVIEW</span>
+                        )}
                         {/* Star rating */}
                         {[...Array(5)].map((_, i) => (
                           <svg 
@@ -267,6 +280,14 @@ export default function Home({ testimonials }: HomeProps) {
                     </div>
                   ))}
                 </div>
+                
+                {hasRealTestimonials && testimonials.length > 3 && (
+                  <div className="text-center mt-8">
+                    <p className="text-gray-600">
+                      Showing {displayTestimonials.length} of {testimonials.length} client reviews
+                    </p>
+                  </div>
+                )}
               </div>
             </section>
           </div>
