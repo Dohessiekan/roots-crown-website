@@ -64,7 +64,7 @@ export default function StaffPage({ staff }: StaffPageProps) {
                 </div>
               ) : (
                 paginatedStaff.map((staffMember) => (
-                  <div key={staffMember.id} className="flex flex-row w-full h-44 bg-white border border-gray-200 rounded-[5px] overflow-hidden shadow-sm">
+                  <div key={staffMember.id} className="flex flex-row w-full h-48 bg-white border border-gray-200 rounded-[5px] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="h-full w-[35%] flex-shrink-0">
                       <img
                         src={staffMember.image || "/images/staffImg.svg"}
@@ -73,22 +73,30 @@ export default function StaffPage({ staff }: StaffPageProps) {
                         style={{ borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px', borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
                       />
                     </div>
-                    <div className="flex-1 flex flex-col justify-center pl-6 pr-4 relative">
-                      <div className="flex items-center justify-between mb-1">
-                        <h3 className="font-montaga text-lg text-gray-900">{staffMember.name}</h3>
-                        <div className="flex items-center gap-1">
-                          <span className="text-yellow-400 text-xl">★</span>
-                          <span className="text-black font-bold text-base">{staffMember.rating}</span>
+                    <div className="flex-1 flex flex-col justify-between p-4">
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="font-montaga text-lg text-gray-900 font-semibold truncate pr-2">{staffMember.name || 'Staff Member'}</h3>
+                          <div className="flex items-center gap-1 flex-shrink-0">
+                            <span className="text-yellow-400 text-lg">★</span>
+                            <span className="text-black font-bold text-sm">{staffMember.rating || '5.0'}</span>
+                          </div>
                         </div>
+                        <p className="text-primary-green font-semibold text-sm mb-3">{staffMember.title || 'Beauty Professional'}</p>
+                        <p className="text-gray-700 text-xs leading-relaxed mb-4">
+                          <span className="font-medium">Specialties:</span> {
+                            Array.isArray(staffMember.specialties) && staffMember.specialties.length > 0 
+                              ? staffMember.specialties.slice(0, 3).join(', ') + (staffMember.specialties.length > 3 ? '...' : '')
+                              : 'General Beauty Services'
+                          }
+                        </p>
                       </div>
-                      <p className="text-primary-green font-semibold text-sm mb-2">{staffMember.title}</p>
-                      <p className="text-gray-700 text-sm mb-4">
-                        Specialties: {Array.isArray(staffMember.specialties) ? staffMember.specialties.join(', ') : 'General Services'}
-                      </p>
-                      <div className="flex justify-start items-center">
+                      <div className="flex justify-start items-center mt-auto">
                         <button
-                          className="text-white font-body font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors text-sm"
+                          className="text-white font-body font-semibold px-4 py-2 rounded-lg shadow-sm transition-all duration-200 text-sm hover:shadow-md transform hover:scale-105"
                           style={{ backgroundColor: '#C49B38' }}
+                          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B88A32'}
+                          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#C49B38'}
                           onClick={() => router.push(`/staff/${staffMember.id}`)}
                         >
                           View Profile

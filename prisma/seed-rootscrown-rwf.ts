@@ -5,18 +5,17 @@ const prisma = new PrismaClient()
 async function main() {
   console.log('🌱 Updating Roots & Crown database with RWF pricing...')
 
-  // Clear existing data but preserve bookings and feedback
+  // Only clear staff-service relationships, preserve everything else
   await prisma.staffService.deleteMany()
-  await prisma.service.deleteMany()
-  await prisma.category.deleteMany()
   
-  // Don't delete staff - keep existing staff with their IDs
-  // Don't delete bookings or feedback - preserve the feedback system
+  // Don't delete services, categories, staff, bookings or feedback - just update them
 
-  // Create Categories
+  // Create or update Categories
   const categories = await Promise.all([
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'massage-therapy' },
+      update: {},
+      create: {
         id: 'massage-therapy',
         name: 'Massage Therapy',
         slug: 'massage-therapy',
@@ -24,8 +23,10 @@ async function main() {
         icon: '/images/massageIcon.svg'
       }
     }),
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'facial-treatments' },
+      update: {},
+      create: {
         id: 'facial-treatments',
         name: 'Facial Treatments',
         slug: 'facial-treatments', 
@@ -33,8 +34,10 @@ async function main() {
         icon: '/images/skinIcon.svg'
       }
     }),
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'body-treatments' },
+      update: {},
+      create: {
         id: 'body-treatments',
         name: 'Body Treatments',
         slug: 'body-treatments',
@@ -42,8 +45,10 @@ async function main() {
         icon: '/images/BodyIcon.svg'
       }
     }),
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'pedicure-manicure' },
+      update: {},
+      create: {
         id: 'pedicure-manicure',
         name: 'Pedicure & Manicure',
         slug: 'pedicure-manicure',
@@ -51,8 +56,10 @@ async function main() {
         icon: '/images/nailsIcon.svg'
       }
     }),
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'hair-services' },
+      update: {},
+      create: {
         id: 'hair-services',
         name: 'Hair Services',
         slug: 'hair-services',
@@ -60,8 +67,10 @@ async function main() {
         icon: '/images/hairIcon.svg'
       }
     }),
-    prisma.category.create({
-      data: {
+    prisma.category.upsert({
+      where: { id: 'tattoos-piercings' },
+      update: {},
+      create: {
         id: 'tattoos-piercings',
         name: 'Tattoos and Piercings',
         slug: 'tattoos-piercings',
@@ -178,12 +187,19 @@ async function main() {
     { name: 'Wash & Set with Premium Shampoo', price: '20,000 RWF', category: 'hair-services', duration: '60 min', id: 'premium-wash-set' }
   ]
 
-  // Create all services
+  // Create or update all services
   for (const serviceData of services) {
     const category = categories.find(cat => cat.slug === serviceData.category)
     if (category) {
-      await prisma.service.create({
-        data: {
+      await prisma.service.upsert({
+        where: { id: serviceData.id },
+        update: {
+          name: serviceData.name,
+          description: `Professional ${serviceData.name.toLowerCase()} service at Roots & Crown`,
+          price: serviceData.price,
+          duration: serviceData.duration,
+        },
+        create: {
           id: serviceData.id,
           name: serviceData.name,
           slug: serviceData.id,
@@ -206,7 +222,7 @@ async function main() {
       name: 'Sarah Johnson',
       title: 'Senior Massage Therapist & Facial Specialist',
       bio: 'Sarah has over 8 years of experience in massage therapy and facial treatments. She specializes in Swedish massage, deep tissue therapy, and luxury facial treatments.',
-      email: 'sarah@rootscrown.com',
+      email: 'rootsandcrownspa@gmail.com',
       phone: '+250788123456',
       image: '/images/staff/sarah.jpg',
       specialties: JSON.stringify(['Swedish Massage', 'Deep Tissue', 'Facial Treatments', 'Aromatherapy']),
@@ -215,24 +231,102 @@ async function main() {
       reviewCount: 127
     },
     {
-      id: 'mike',
-      name: 'Mike Thompson',
-      title: 'Master Hair Stylist & Colorist',
-      bio: 'Mike is our lead hair specialist with expertise in all hair services including cuts, treatments, styling, and advanced coloring techniques.',
-      email: 'mike@rootscrown.com',
+      id: 'sabra',
+      name: 'Sabra',
+      title: 'Hair Braiding Stylist',
+      bio: 'Sabra is our hair braiding stylist, well experienced and gentle with scalp. She specializes in all types of braiding styles, cornrows, and protective hairstyles.',
+      email: 'rootsandcrownspa@gmail.com',
       phone: '+250788123457',
-      image: '/images/staff/mike.jpg',
-      specialties: JSON.stringify(['Hair Cutting', 'Hair Coloring', 'Hair Treatments', 'Hair Styling']),
+      image: '/images/staff/sabra.jpg',
+      specialties: JSON.stringify(['Hair Braiding', 'Cornrows', 'Protective Styles', 'Hair Styling']),
       isActive: true,
       rating: 4.8,
       reviewCount: 98
+    },
+    {
+      id: 'claude',
+      name: 'Claude',
+      title: 'Hair Dresser',
+      bio: 'Claude is our professional hair dresser specializing in all hair services including cutting, styling, coloring, and treatments.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123460',
+      image: '/images/staff/claude.jpg',
+      specialties: JSON.stringify(['Hair Cutting', 'Hair Styling', 'Hair Coloring', 'Hair Treatments']),
+      isActive: true,
+      rating: 4.7,
+      reviewCount: 85
+    },
+    {
+      id: 'abouba',
+      name: 'Abouba',
+      title: 'Barber',
+      bio: 'Abouba is our skilled barber specializing in mens grooming, beard trimming, and classic barber services.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123461',
+      image: '/images/staff/abouba.jpg',
+      specialties: JSON.stringify(['Mens Haircuts', 'Beard Trimming', 'Mens Grooming', 'Classic Barber Services']),
+      isActive: true,
+      rating: 4.8,
+      reviewCount: 92
+    },
+    {
+      id: 'bibiane',
+      name: 'Bibiane',
+      title: 'Body & Facial Treatment Specialist',
+      bio: 'Bibiane specializes in body and facial treatments, providing relaxing and rejuvenating services for our clients.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123462',
+      image: '/images/staff/bibiane.jpg',
+      specialties: JSON.stringify(['Body Treatments', 'Facial Treatments', 'Skin Care', 'Beauty Therapy']),
+      isActive: true,
+      rating: 4.6,
+      reviewCount: 78
+    },
+    {
+      id: 'mohamed',
+      name: 'Mohamed',
+      title: 'Male Nail Technician',
+      bio: 'Mohamed is our male nail technician specializing in manicures, pedicures, and nail care for all clients.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123463',
+      image: '/images/staff/mohamed.jpg',
+      specialties: JSON.stringify(['Manicure', 'Pedicure', 'Nail Care', 'Nail Treatments']),
+      isActive: true,
+      rating: 4.5,
+      reviewCount: 65
+    },
+    {
+      id: 'ishimwe',
+      name: 'Ishimwe',
+      title: 'Female Nail Technician',
+      bio: 'Ishimwe is our female nail technician specializing in nail art, gel nails, and luxury nail treatments.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123464',
+      image: '/images/staff/ishimwe.jpg',
+      specialties: JSON.stringify(['Nail Art', 'Gel Nails', 'Manicure', 'Pedicure']),
+      isActive: true,
+      rating: 4.7,
+      reviewCount: 88
+    },
+    {
+      id: 'lydia',
+      name: 'Lydia',
+      title: 'Female Hairdresser',
+      bio: 'Lydia is our female hairdresser specializing in womens hair styling, cutting, and hair treatments.',
+      email: 'rootsandcrownspa@gmail.com',
+      phone: '+250788123465',
+      image: '/images/staff/lydia.jpg',
+      specialties: JSON.stringify(['Womens Haircuts', 'Hair Styling', 'Hair Treatments', 'Hair Care']),
+      isActive: true,
+      rating: 4.8,
+      reviewCount: 95
     },
     {
       id: 'lisa',
       name: 'Lisa Chen',
       title: 'Nail Artist & Pedicure Specialist',
       bio: 'Lisa is our talented nail artist specializing in all manicure and pedicure services, including gel nails, nail art, and luxury treatments.',
-      email: 'lisa@rootscrown.com',
+      email: 'rootsandcrownspa@gmail.com',
       phone: '+250788123458',
       image: '/images/staff/lisa.jpg',
       specialties: JSON.stringify(['Manicure', 'Pedicure', 'Gel Nails', 'Nail Art']),
@@ -245,7 +339,7 @@ async function main() {
       name: 'Anna Rodriguez',
       title: 'Body Treatment & Waxing Specialist',
       bio: 'Anna specializes in all body treatments including waxing, body therapy, and beauty treatments. She ensures comfort and professionalism in all services.',
-      email: 'anna@rootscrown.com',
+      email: 'rootsandcrownspa@gmail.com',
       phone: '+250788123459',
       image: '/images/staff/anna.jpg',
       specialties: JSON.stringify(['Body Waxing', 'Body Treatments', 'Beauty Therapy']),
@@ -303,7 +397,7 @@ async function main() {
     })
   }
 
-  // Mike - Hair specialist
+  // Sabra - Hair braiding and styling specialist
   const hairServices = allServices.filter(s => 
     s.categoryId === 'hair-services'
   )
@@ -312,14 +406,14 @@ async function main() {
     await prisma.staffService.upsert({
       where: {
         staffId_serviceId: {
-          staffId: 'mike',
+          staffId: 'sabra',
           serviceId: service.id
         }
       },
       update: {},
       create: {
-        id: `mike-${service.id}`,
-        staffId: 'mike',
+        id: `sabra-${service.id}`,
+        staffId: 'sabra',
         serviceId: service.id
       }
     })
@@ -369,23 +463,137 @@ async function main() {
     })
   }
 
-  // John - Tattoo/Piercing specialist
-  const tattooServices = allServices.filter(s => 
-    s.categoryId === 'tattoo-piercing'
-  )
-  
-  for (const service of tattooServices) {
+  // Claude - Hair dresser specialist
+  for (const service of hairServices) {
     await prisma.staffService.upsert({
       where: {
         staffId_serviceId: {
-          staffId: 'john',
+          staffId: 'claude',
           serviceId: service.id
         }
       },
       update: {},
       create: {
-        id: `john-${service.id}`,
-        staffId: 'john',
+        id: `claude-${service.id}`,
+        staffId: 'claude',
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Abouba - Barber specialist (men's hair services)
+  const menHairServices = hairServices.filter(s => 
+    s.name.includes('Men') || 
+    s.name.includes('Beard') || 
+    s.name.includes('Machine Haircut') ||
+    s.name.includes('Kids')
+  )
+  
+  for (const service of menHairServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'abouba',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `abouba-${service.id}`,
+        staffId: 'abouba',
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Bibiane - Body & Facial treatments specialist
+  const facialServices = allServices.filter(s => 
+    s.categoryId === 'facial-treatments'
+  )
+  
+  for (const service of bodyServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'bibiane',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `bibiane-${service.id}`,
+        staffId: 'bibiane',
+        serviceId: service.id
+      }
+    })
+  }
+  
+  for (const service of facialServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'bibiane',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `bibiane-facial-${service.id}`,
+        staffId: 'bibiane',
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Mohamed - Male nail technician
+  for (const service of nailServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'mohamed',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `mohamed-${service.id}`,
+        staffId: 'mohamed',
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Ishimwe - Female nail technician
+  for (const service of nailServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'ishimwe',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `ishimwe-${service.id}`,
+        staffId: 'ishimwe',
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Lydia - Female hairdresser
+  for (const service of hairServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: 'lydia',
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `lydia-${service.id}`,
+        staffId: 'lydia',
         serviceId: service.id
       }
     })

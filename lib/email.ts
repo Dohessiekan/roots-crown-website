@@ -15,8 +15,8 @@ interface BookingEmailData {
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'd.gnondoyi@alustudent.com',
-    pass: process.env.EMAIL_PASS || 'your-app-password'
+    user: process.env.EMAIL_USER || 'rootsandcrownspa@gmail.com',
+    pass: process.env.EMAIL_PASS || 'ljvrhfghxbrsxtms'
   }
 })
 
@@ -35,46 +35,152 @@ export async function sendBookingConfirmationToCustomer(bookingData: BookingEmai
     <html>
     <head>
       <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background-color: #8B4513; color: white; padding: 20px; text-align: center; }
-        .content { padding: 20px; background-color: #f9f9f9; }
-        .booking-details { background-color: white; padding: 15px; margin: 20px 0; border-radius: 5px; }
-        .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
-        .logo { font-size: 24px; font-weight: bold; }
+        body { 
+          font-family: 'Lato', Arial, sans-serif; 
+          line-height: 1.6; 
+          color: #2A2A2A; 
+          background-color: #FDF5EF;
+          margin: 0;
+          padding: 20px;
+        }
+        .container { 
+          max-width: 600px; 
+          margin: 0 auto; 
+          background-color: #FFFFFF;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .header { 
+          background: linear-gradient(135deg, #34893F 0%, #2d7035 100%);
+          color: #FFFFFF; 
+          padding: 25px; 
+          text-align: center; 
+        }
+        .content { 
+          padding: 30px; 
+        }
+        .section { 
+          margin-bottom: 25px;
+        }
+        .section-title {
+          font-family: 'Montaga', serif;
+          font-size: 18px;
+          font-weight: 400;
+          color: #34893F;
+          margin-bottom: 15px;
+          border-bottom: 2px solid #C49B38;
+          padding-bottom: 5px;
+        }
+        .info-row {
+          display: flex;
+          margin-bottom: 8px;
+        }
+        .info-label {
+          font-weight: bold;
+          min-width: 120px;
+          color: #2A2A2A;
+        }
+        .info-value {
+          color: #2A2A2A;
+        }
+        .important-box {
+          background-color: #FDF5EF;
+          border: 1px solid #C49B38;
+          padding: 20px;
+          margin: 20px 0;
+          border-radius: 8px;
+        }
+        .important-box h3 {
+          margin-top: 0;
+          color: #34893F;
+          font-family: 'Montaga', serif;
+        }
+        .important-box ul {
+          margin: 10px 0;
+          padding-left: 20px;
+        }
+        .footer {
+          background-color: #FDF5EF;
+          padding: 20px;
+          text-align: center;
+          font-size: 14px;
+          color: #2A2A2A;
+          border-top: 1px solid #C49B38;
+        }
+        .contact-section {
+          text-align: center;
+          margin-top: 20px;
+          padding: 15px;
+          background-color: #FDF5EF;
+          border-radius: 8px;
+        }
       </style>
     </head>
     <body>
       <div class="container">
         <div class="header">
-          <div class="logo">Roots & Crown Salon</div>
-          <p>Your Beauty, Our Passion</p>
+          <h1 style="margin: 0; font-size: 28px; font-family: 'Montaga', serif;">✅ Booking Confirmed!</h1>
+          <p style="margin: 10px 0 0 0; font-size: 16px;">Thank you for choosing Roots & Crown</p>
         </div>
         
         <div class="content">
-          <h2>Booking Confirmation</h2>
+          <p><strong>Dear ${customerName},</strong></p>
           
-          <p>Dear ${customerName},</p>
+          <p>Your appointment has been successfully confirmed. We're excited to see you!</p>
           
-          <p>Thank you for booking with Roots & Crown Salon! We're excited to serve you.</p>
-          
-          <div class="booking-details">
-            <h3>Appointment Details:</h3>
-            <p><strong>Service:</strong> ${serviceName}</p>
-            <p><strong>Staff Member:</strong> ${staffName}</p>
-            <p><strong>Date:</strong> ${formattedDate}</p>
-            <p><strong>Time:</strong> ${appointmentTime}</p>
-            <p><strong>Booking ID:</strong> ${bookingId}</p>
-            ${totalPrice ? `<p><strong>Total Price:</strong> ${totalPrice}</p>` : ''}
+          <div style="text-align: center; margin: 25px 0;">
+            <div style="background: linear-gradient(135deg, #C49B38 0%, #b8860b 100%); color: white; padding: 10px 20px; border-radius: 8px; display: inline-block;">
+              <strong>Booking ID: ${bookingId}</strong>
+            </div>
           </div>
-          
-          <p>We look forward to seeing you soon!</p>
-          
-          <p>Best regards,<br>The Roots & Crown Team</p>
+
+          <div class="section">
+            <div class="section-title">Appointment Details</div>
+            <div class="info-row">
+              <div class="info-label">Service:</div>
+              <div class="info-value">${serviceName}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Staff Member:</div>
+              <div class="info-value">${staffName}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Date:</div>
+              <div class="info-value">${formattedDate}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Time:</div>
+              <div class="info-value">${appointmentTime}</div>
+            </div>
+            ${totalPrice ? `<div class="info-row">
+              <div class="info-label">Price:</div>
+              <div class="info-value">${totalPrice}</div>
+            </div>` : ''}
+          </div>
+
+          <div class="important-box">
+            <h3>Important Information:</h3>
+            <ul>
+              <li>Please arrive 10 minutes before your appointment time</li>
+              <li>If you need to reschedule or cancel, please call us at least 24 hours in advance</li>
+              <li>Bring a valid ID and any relevant medical information</li>
+            </ul>
+          </div>
+
+          <div class="contact-section">
+            <div style="text-align: center; margin-top: 10px;">
+              <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/feedback?bookingId=${bookingId}" style="background: linear-gradient(135deg, #C49B38 0%, #b8860b 100%); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block; font-size: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-right: 30px;">Feedback</a>
+              <a href="mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'rootsandcrownspa@gmail.com'}" style="background: linear-gradient(135deg, #C49B38 0%, #b8860b 100%); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block; font-size: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">Contact Us</a>
+            </div>
+          </div>
         </div>
         
         <div class="footer">
-          <p>Roots & Crown Salon | Contact: ${process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'd.gnondoyi@alustudent.com'}</p>
+          <p style="margin: 0 0 10px 0;"><strong>Roots & Crown</strong></p>
+          <p style="margin: 5px 0;">📍 123 Beauty Street, Suite 456, City, State 12345</p>
+          <p style="margin: 5px 0;">📞 Phone: +250792866794</p>
+          <p style="margin: 5px 0;">📧 Email: ${process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'rootsandcrownspa@gmail.com'}</p>
         </div>
       </div>
     </body>
@@ -82,7 +188,7 @@ export async function sendBookingConfirmationToCustomer(bookingData: BookingEmai
   `
 
   const mailOptions = {
-    from: `"Roots & Crown Salon" <${process.env.EMAIL_USER || 'd.gnondoyi@alustudent.com'}>`,
+    from: `"Roots & Crown Salon" <${process.env.EMAIL_USER || 'rootsandcrownspa@gmail.com'}>`,
     to: customerEmail,
     subject: `Booking Confirmation - ${serviceName} on ${formattedDate}`,
     html: customerEmailContent
@@ -113,35 +219,130 @@ export async function sendBookingNotificationToSalon(bookingData: BookingEmailDa
     <html>
     <head>
       <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background-color: #8B4513; color: white; padding: 20px; text-align: center; }
-        .content { padding: 20px; background-color: #f9f9f9; }
-        .booking-details { background-color: white; padding: 15px; margin: 20px 0; border-radius: 5px; }
-        .urgent { background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 10px; border-radius: 5px; }
+        body { 
+          font-family: 'Lato', Arial, sans-serif; 
+          line-height: 1.6; 
+          color: #2A2A2A; 
+          background-color: #FDF5EF;
+          margin: 0;
+          padding: 20px;
+        }
+        .container { 
+          max-width: 600px; 
+          margin: 0 auto; 
+          background-color: #FFFFFF;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .header { 
+          background: linear-gradient(135deg, #34893F 0%, #2d7035 100%);
+          color: #FFFFFF; 
+          padding: 25px; 
+          text-align: center; 
+        }
+        .content { 
+          padding: 30px; 
+        }
+        .section { 
+          margin-bottom: 25px;
+        }
+        .section-title {
+          font-family: 'Montaga', serif;
+          font-size: 18px;
+          font-weight: 400;
+          color: #34893F;
+          margin-bottom: 15px;
+          border-bottom: 2px solid #C49B38;
+          padding-bottom: 5px;
+        }
+        .info-row {
+          display: flex;
+          margin-bottom: 8px;
+        }
+        .info-label {
+          font-weight: bold;
+          min-width: 120px;
+          color: #2A2A2A;
+        }
+        .info-value {
+          color: #2A2A2A;
+        }
+        .alert-box {
+          background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%);
+          border-left: 4px solid #34893F;
+          padding: 20px;
+          margin-bottom: 25px;
+          border-radius: 8px;
+        }
+        .footer {
+          background-color: #FDF5EF;
+          padding: 20px;
+          text-align: center;
+          font-size: 14px;
+          color: #2A2A2A;
+          border-top: 1px solid #C49B38;
+        }
       </style>
     </head>
     <body>
       <div class="container">
         <div class="header">
-          <div class="logo">New Booking Alert</div>
+          <h1 style="margin: 0; font-size: 28px; font-family: 'Montaga', serif;">🗓️ New Booking Alert</h1>
+          <p style="margin: 10px 0 0 0; font-size: 16px;">Booking ID: ${bookingId}</p>
         </div>
         
         <div class="content">
-          <div class="urgent">
-            <h2>🆕 New Booking Received!</h2>
+          <div class="alert-box">
+            <strong>📋 Information:</strong> A new appointment has been automatically confirmed and added to your schedule.
           </div>
-          
-          <div class="booking-details">
-            <h3>Booking Details:</h3>
-            <p><strong>Customer:</strong> ${customerName} (${customerEmail})</p>
-            <p><strong>Service:</strong> ${serviceName}</p>
-            <p><strong>Staff:</strong> ${staffName}</p>
-            <p><strong>Date:</strong> ${formattedDate}</p>
-            <p><strong>Time:</strong> ${appointmentTime}</p>
-            <p><strong>Booking ID:</strong> ${bookingId}</p>
-            ${totalPrice ? `<p><strong>Total:</strong> ${totalPrice}</p>` : ''}
+
+          <div class="section">
+            <div class="section-title">Appointment Details</div>
+            <div class="info-row">
+              <div class="info-label">Service:</div>
+              <div class="info-value">${serviceName}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Staff Member:</div>
+              <div class="info-value">${staffName}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Date:</div>
+              <div class="info-value">${formattedDate}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Time:</div>
+              <div class="info-value">${appointmentTime}</div>
+            </div>
+            ${totalPrice ? `<div class="info-row">
+              <div class="info-label">Price:</div>
+              <div class="info-value">${totalPrice}</div>
+            </div>` : ''}
           </div>
+
+          <div class="section">
+            <div class="section-title">Customer Information</div>
+            <div class="info-row">
+              <div class="info-label">Name:</div>
+              <div class="info-value">${customerName}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Email:</div>
+              <div class="info-value">${customerEmail}</div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px;">
+            <div style="background: linear-gradient(135deg, #C49B38 0%, #b8860b 100%); color: white; padding: 12px 24px; border-radius: 8px; display: inline-block;">
+              <strong>📊 View in Admin Dashboard</strong>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer">
+          <p style="margin-bottom: 10px;">This email was automatically generated when a customer completed their online booking. The appointment is confirmed and has been added to your schedule.</p>
+          <p><strong>Roots & Crown Salon</strong> | ${process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'rootsandcrownspa@gmail.com'}</p>
         </div>
       </div>
     </body>
@@ -149,8 +350,8 @@ export async function sendBookingNotificationToSalon(bookingData: BookingEmailDa
   `
 
   const mailOptions = {
-    from: `"Booking System" <${process.env.EMAIL_USER || 'd.gnondoyi@alustudent.com'}>`,
-    to: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'd.gnondoyi@alustudent.com',
+    from: `"Booking System" <${process.env.EMAIL_USER || 'rootsandcrownspa@gmail.com'}>`,
+    to: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'rootsandcrownspa@gmail.com',
     subject: `🆕 New Booking: ${customerName} - ${serviceName}`,
     html: salonEmailContent
   }
@@ -168,8 +369,8 @@ export async function sendBookingNotificationToSalon(bookingData: BookingEmailDa
 // Test email function for troubleshooting
 export async function testEmailConfiguration() {
   const testMailOptions = {
-    from: `"Roots & Crown Test" <${process.env.EMAIL_USER || 'd.gnondoyi@alustudent.com'}>`,
-    to: process.env.EMAIL_USER || 'd.gnondoyi@alustudent.com',
+    from: `"Roots & Crown Test" <${process.env.EMAIL_USER || 'rootsandcrownspa@gmail.com'}>`,
+    to: process.env.EMAIL_USER || 'rootsandcrownspa@gmail.com',
     subject: 'Email Configuration Test',
     html: `
       <h2>Email Test Successful! ✅</h2>

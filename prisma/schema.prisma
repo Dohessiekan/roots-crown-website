@@ -42,7 +42,7 @@ model Staff {
   name          String
   title         String
   bio           String
-  email         String         @unique
+  email         String
   phone         String?
   image         String?
   specialties   String         // JSON array as string
