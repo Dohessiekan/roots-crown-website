@@ -1,6 +1,22 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ServiceCard from '../components/ServiceCard'
+import { GetServerSideProps } from 'next'
+
+interface Testimonial {
+  id: string
+  customerName: string
+  rating: number
+  comment: string
+  serviceName: string
+  staffName: string
+  date: string
+  wouldRecommend: boolean
+}
+
+interface HomeProps {
+  testimonials: Testimonial[]
+}
 
 // Sample data - replace with actual data from your backend
 const featuredServices = [
@@ -30,7 +46,42 @@ const featuredServices = [
   }
 ]
 
-export default function Home() {
+export default function Home({ testimonials }: HomeProps) {
+  // Fallback testimonials if no real feedback exists
+  const fallbackTestimonials = [
+    {
+      id: 'fallback-1',
+      customerName: 'Aline M.',
+      rating: 5,
+      comment: 'Absolutely loved my experience! The staff is so friendly and my hair has never looked better.',
+      serviceName: 'Hair Styling',
+      staffName: 'Our Team',
+      date: new Date().toISOString(),
+      wouldRecommend: true
+    },
+    {
+      id: 'fallback-2',
+      customerName: 'Jean-Paul N.',
+      rating: 5,
+      comment: 'The massage therapy was so relaxing. I left feeling completely renewed. Highly recommend Roots & Crown!',
+      serviceName: 'Massage Therapy',
+      staffName: 'Our Team',
+      date: new Date().toISOString(),
+      wouldRecommend: true
+    },
+    {
+      id: 'fallback-3',
+      customerName: 'Diane K.',
+      rating: 5,
+      comment: 'Clean, beautiful space and truly personalized attention. I always feel pampered and valued.',
+      serviceName: 'Facial Treatment',
+      staffName: 'Our Team',
+      date: new Date().toISOString(),
+      wouldRecommend: true
+    }
+  ]
+
+  const displayTestimonials = testimonials.length > 0 ? testimonials.slice(0, 3) : fallbackTestimonials
   return (
     <>
       <Navbar />
@@ -179,52 +230,41 @@ export default function Home() {
             <section className="py-16 bg-white">
               <div className="w-full max-w-none mx-auto px-4" style={{ width: '100%' }}>
                 <h2 className="text-4xl font-heading text-primary-green text-center mb-6">
-                  Testimonials
+                  What Our Clients Say
                 </h2>
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                  {/* Testimonial Card 1 */}
-                  <div className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
-                    <div className="flex items-center mb-4">
-                      {/* 5 stars */}
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" /></svg>
-                      ))}
+                  {displayTestimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
+                      <div className="flex items-center mb-4">
+                        {/* Star rating */}
+                        {[...Array(5)].map((_, i) => (
+                          <svg 
+                            key={i} 
+                            className={`w-5 h-5 mr-1 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+                            fill="currentColor" 
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" />
+                          </svg>
+                        ))}
+                        <span className="ml-2 text-sm text-gray-600">({testimonial.rating}/5)</span>
+                      </div>
+                      <p className="text-black italic text-left mb-4">
+                        "{testimonial.comment}"
+                      </p>
+                      <div className="text-sm text-gray-500 mb-2">
+                        <span className="font-semibold">{testimonial.serviceName}</span> with {testimonial.staffName}
+                      </div>
+                      <div className="text-gray-500 italic text-right w-full">
+                        — {testimonial.customerName}
+                      </div>
+                      {testimonial.wouldRecommend && (
+                        <div className="mt-2 text-xs text-green-600 font-medium">
+                          ✓ Would recommend
+                        </div>
+                      )}
                     </div>
-                    <p className="text-black italic text-left mb-4">
-                      "Absolutely loved my experience! The staff is so friendly and my hair has never looked better."
-                    </p>
-                    <div className="text-gray-500 italic text-right w-full">
-                      — Aline M.
-                    </div>
-                  </div>
-                  {/* Testimonial Card 2 */}
-                  <div className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" /></svg>
-                      ))}
-                    </div>
-                    <p className="text-black italic text-left mb-4">
-                      "The massage therapy was so relaxing. I left feeling completely renewed. Highly recommend Roots & Crown!"
-                    </p>
-                    <div className="text-gray-500 italic text-right w-full">
-                      — Jean-Paul N.
-                    </div>
-                  </div>
-                  {/* Testimonial Card 3 */}
-                  <div className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" /></svg>
-                      ))}
-                    </div>
-                    <p className="text-black italic text-left mb-4">
-                      "Clean, beautiful space and truly personalized attention. I always feel pampered and valued."
-                    </p>
-                    <div className="text-gray-500 italic text-right w-full">
-                      — Diane K.
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </section>
@@ -234,4 +274,33 @@ export default function Home() {
       <Footer />
     </>
   )
+}
+
+// Fetch testimonials data on server side
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    // Use absolute URL or localhost for development
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+    const response = await fetch(`${baseUrl}/api/testimonials`)
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch testimonials')
+    }
+    
+    const data = await response.json()
+    
+    return {
+      props: {
+        testimonials: data.testimonials || []
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching testimonials:', error)
+    // Return empty testimonials array if fetch fails
+    return {
+      props: {
+        testimonials: []
+      }
+    }
+  }
 }
