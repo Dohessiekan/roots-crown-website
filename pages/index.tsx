@@ -256,70 +256,76 @@ export default function Home({ testimonials }: HomeProps) {
 
 // Fetch testimonials data on server side
 export const getServerSideProps: GetServerSideProps = async () => {
-  // For now, return empty testimonials to avoid database connection issues during deployment
-  // This will be populated once the database is properly connected on Render
-  return {
-    props: {
-      testimonials: []
-    }
-  }
-  
-  /* 
-  // TODO: Re-enable once database is fully configured on Render
   let testimonials: Testimonial[] = []
   
   try {
-    const prisma = new PrismaClient()
-    
-    // Fetch high-rated feedback (4-5 stars) with booking and staff details
-    const feedbackData = await prisma.feedback.findMany({
-      where: {
-        staffRating: {
-          gte: 4 // 4 stars and above
+    // Only try to connect to database if DATABASE_URL is available
+    if (process.env.DATABASE_URL) {
+      const { PrismaClient } = require('@prisma/client')
+      const prisma = new PrismaClient()
+      
+      // Set a timeout for the database query
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('Database query timeout')), 5000)
+      )
+      
+      const queryPromise = prisma.feedback.findMany({
+        where: {
+          staffRating: {
+            gte: 4 // 4 stars and above
+          },
+          comment: {
+            not: null
+          },
+          NOT: [
+            { comment: '' }, // Exclude empty comments
+            { comment: null } // Exclude null comments
+          ]
         },
-        comment: {
-          not: null // Only feedback with comments
-        }
-      },
-      include: {
-        booking: {
-          include: {
-            staff: {
-              select: {
-                name: true
-              }
-            },
-            service: {
-              select: {
-                name: true
+        include: {
+          booking: {
+            include: {
+              staff: {
+                select: {
+                  name: true
+                }
+              },
+              service: {
+                select: {
+                  name: true
+                }
               }
             }
           }
-        }
-      },
-      orderBy: {
-        createdAt: 'desc'
-      },
-      take: 6 // Get latest 6 testimonials
-    })
+        },
+        orderBy: {
+          createdAt: 'desc'
+        },
+        take: 6 // Get latest 6 testimonials
+      })
 
-    // Format testimonials for display
-    testimonials = feedbackData.map(feedback => ({
-      id: feedback.id,
-      customerName: feedback.customerName,
-      rating: feedback.staffRating,
-      comment: feedback.comment || '',
-      serviceName: feedback.booking?.service?.name || 'Service',
-      staffName: feedback.booking?.staff?.name || 'Staff Member',
-      date: feedback.createdAt.toISOString(),
-      wouldRecommend: feedback.wouldRecommend
-    }))
+      // Race between query and timeout
+      const feedbackData = await Promise.race([queryPromise, timeoutPromise])
 
-    await prisma.$disconnect()
+      // Format testimonials for display
+      testimonials = (feedbackData as any[]).map(feedback => ({
+        id: feedback.id,
+        customerName: feedback.customerName,
+        rating: feedback.staffRating,
+        comment: feedback.comment || '',
+        serviceName: feedback.booking?.service?.name || 'Service',
+        staffName: feedback.booking?.staff?.name || 'Staff Member',
+        date: feedback.createdAt.toISOString(),
+        wouldRecommend: feedback.wouldRecommend
+      }))
+
+      await prisma.$disconnect()
+    }
 
   } catch (error) {
-    console.error('Error fetching testimonials:', error)
+    console.log('Testimonials not available:', (error as Error).message || 'Database connection failed')
     // testimonials remains empty array if fetch fails
+    testimonials = []
   }
   
   return {
@@ -327,5 +333,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
       testimonials
     }
   }
-  */
 }
