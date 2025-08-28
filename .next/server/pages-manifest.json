@@ -1,12 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/services": "pages/services.js",
-  "/services/[category]": "pages/services/[category].js",
-  "/services/service/[serviceId]": "pages/services/service/[serviceId].js",
-  "/api/availability/[staffId]": "pages/api/availability/[staffId].js",
-  "/staff/[id]": "pages/staff/[id].js",
-  "/api/staff/[id]/feedback": "pages/api/staff/[id]/feedback.js"
+  "/_document": "pages/_document.js",
+  "/services": "pages/services.js"
 }

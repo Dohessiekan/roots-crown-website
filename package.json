@@ -46,6 +46,6 @@
     "ts-node": "^10.9.2"
   },
   "prisma": {
-    "seed": "npx ts-node prisma/seed.ts"
+    "seed": "npx ts-node prisma/seed-rootscrown-rwf.ts"
   }
 }
