@@ -256,6 +256,16 @@ export default function Home({ testimonials }: HomeProps) {
 
 // Fetch testimonials data on server side
 export const getServerSideProps: GetServerSideProps = async () => {
+  // For now, return empty testimonials to avoid database connection issues during deployment
+  // This will be populated once the database is properly connected on Render
+  return {
+    props: {
+      testimonials: []
+    }
+  }
+  
+  /* 
+  // TODO: Re-enable once database is fully configured on Render
   let testimonials: Testimonial[] = []
   
   try {
@@ -317,4 +327,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
       testimonials
     }
   }
+  */
 }
