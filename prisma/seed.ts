@@ -110,6 +110,24 @@ async function main() {
       duration: '75 min',
       categoryId: hairCategory!.id
     },
+    {
+      id: 'hair-braiding',
+      name: 'Hair Braiding',
+      slug: 'hair-braiding',
+      description: 'Professional hair braiding services including box braids, cornrows, and protective styles. Gentle scalp care included.',
+      price: 'From $80',
+      duration: '2-4 hours',
+      categoryId: hairCategory!.id
+    },
+    {
+      id: 'protective-styles',
+      name: 'Protective Styling',
+      slug: 'protective-styling', 
+      description: 'Protective hairstyles designed to maintain hair health while looking beautiful.',
+      price: 'From $70',
+      duration: '2-3 hours',
+      categoryId: hairCategory!.id
+    },
     // Skincare Services
     {
       id: 'classic-facial',
@@ -265,6 +283,16 @@ async function main() {
       phone: '+250-123-456-793',
       image: '/images/staff/alex.jpg',
       specialties: JSON.stringify(['Hot Stone Therapy', 'Aromatherapy', 'Body Wraps', 'Wellness Treatments'])
+    },
+    {
+      id: 'sabra',
+      name: 'Sabra',
+      title: 'Hair Braiding Stylist',
+      bio: 'Sabra is our experienced hair braiding specialist who is well-versed in all braiding techniques and is known for being gentle with scalp care. She creates beautiful protective styles while ensuring hair health.',
+      email: 'sabra@rootsandcrown.com',
+      phone: '+250792866794',
+      image: '/images/staff/sabra.jpg',
+      specialties: JSON.stringify(['Hair Braiding', 'Protective Styles', 'Box Braids', 'Cornrows', 'Scalp Care'])
     }
   ]
 
@@ -380,6 +408,27 @@ async function main() {
       create: {
         id: `${alex!.id}-${service.id}`,
         staffId: alex!.id,
+        serviceId: service.id
+      }
+    })
+  }
+
+  // Sabra - Hair services (braiding specialist)
+  const sabra = createdStaff.find(s => s.email === 'sabra@rootsandcrown.com')
+  const sabraHairServices = createdServices.filter(s => s.categoryId === hairCategory!.id)
+  
+  for (const service of sabraHairServices) {
+    await prisma.staffService.upsert({
+      where: {
+        staffId_serviceId: {
+          staffId: sabra!.id,
+          serviceId: service.id
+        }
+      },
+      update: {},
+      create: {
+        id: `${sabra!.id}-${service.id}`,
+        staffId: sabra!.id,
         serviceId: service.id
       }
     })

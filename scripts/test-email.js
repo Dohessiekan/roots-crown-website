@@ -4,14 +4,14 @@
 const http = require('http')
 
 const testBookingData = {
-  customerName: 'Jane Smith',
+  customerName: 'Test Customer',
   customerEmail: 'gnondoyixavier@gmail.com', // Using your Gmail for testing
-  customerPhone: '555-987-6543',
-  serviceId: 'haircolor', // Different service
-  staffId: 'mike',        // Different staff member
-  appointmentDate: '2025-08-02',
-  appointmentTime: '15:00', // Different time
-  notes: 'Test booking to verify updated email system'
+  customerPhone: '+250792866794',
+  serviceId: 'scissor-haircut', // Changed to scissor haircut to test Sabra with all hair services
+  staffId: 'sabra',        // Testing with Sabra
+  appointmentDate: '2025-08-31',
+  appointmentTime: '17:30', // Changed to 5:30 PM
+  notes: 'Test booking for Sabra - scissor haircut service (testing all hair services)'
 }
 
 function makeAPIRequest(data) {
