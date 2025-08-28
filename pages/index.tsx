@@ -49,6 +49,7 @@ const featuredServices = [
 
 export default function Home({ testimonials }: HomeProps) {
   const hasRealTestimonials = testimonials.length > 0
+  
   return (
     <>
       <Navbar />
