@@ -129,7 +129,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {/* Service Card 1 */}
               <div className="bg-white shadow-md rounded-lg border border-gray-200 p-6 flex flex-col items-start">
-                <img src="/images/HairIcon.svg" alt="Hair Services Icon" className="mb-3 w-14 h-14" />
+                <img src="/images/hairIcon.svg" alt="Hair Services Icon" className="mb-3 w-14 h-14" />
                 <h3 className="font-heading text-xl text-primary-green mb-2">Hair Services</h3>
                 <p className="text-gray-700 text-base text-left">Haircuts, styling, braids, coloring, and deep treatments like keratin or protein care.</p>
               </div>
@@ -141,7 +141,7 @@ export default function Home() {
               </div>
               {/* Service Card 3 */}
               <div className="bg-white shadow-md rounded-lg border border-gray-200 p-6 flex flex-col items-start">
-                <img src="/images/MassageIcon.svg" alt="Massage Therapy Icon" className="mb-3 w-14 h-14" />
+                <img src="/images/massageIcon.svg" alt="Massage Therapy Icon" className="mb-3 w-14 h-14" />
                 <h3 className="font-heading text-xl text-primary-green mb-2">Massage Therapy</h3>
                 <p className="text-gray-700 text-base text-left">Relaxation, deep tissue, and aromatherapy massage options for stress relief and healing.</p>
               </div>
