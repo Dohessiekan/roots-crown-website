@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ServiceCard from '../components/ServiceCard'
 import { GetServerSideProps } from 'next'
+import { PrismaClient } from '@prisma/client'
 
 interface Testimonial {
   id: string
@@ -278,29 +279,65 @@ export default function Home({ testimonials }: HomeProps) {
 
 // Fetch testimonials data on server side
 export const getServerSideProps: GetServerSideProps = async () => {
+  let testimonials: Testimonial[] = []
+  
   try {
-    // Use absolute URL or localhost for development
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-    const response = await fetch(`${baseUrl}/api/testimonials`)
+    const prisma = new PrismaClient()
     
-    if (!response.ok) {
-      throw new Error('Failed to fetch testimonials')
-    }
-    
-    const data = await response.json()
-    
-    return {
-      props: {
-        testimonials: data.testimonials || []
-      }
-    }
+    // Fetch high-rated feedback (4-5 stars) with booking and staff details
+    const feedbackData = await prisma.feedback.findMany({
+      where: {
+        staffRating: {
+          gte: 4 // 4 stars and above
+        },
+        comment: {
+          not: null // Only feedback with comments
+        }
+      },
+      include: {
+        booking: {
+          include: {
+            staff: {
+              select: {
+                name: true
+              }
+            },
+            service: {
+              select: {
+                name: true
+              }
+            }
+          }
+        }
+      },
+      orderBy: {
+        createdAt: 'desc'
+      },
+      take: 6 // Get latest 6 testimonials
+    })
+
+    // Format testimonials for display
+    testimonials = feedbackData.map(feedback => ({
+      id: feedback.id,
+      customerName: feedback.customerName,
+      rating: feedback.staffRating,
+      comment: feedback.comment || '',
+      serviceName: feedback.booking?.service?.name || 'Service',
+      staffName: feedback.booking?.staff?.name || 'Staff Member',
+      date: feedback.createdAt.toISOString(),
+      wouldRecommend: feedback.wouldRecommend
+    }))
+
+    await prisma.$disconnect()
+
   } catch (error) {
     console.error('Error fetching testimonials:', error)
-    // Return empty testimonials array if fetch fails
-    return {
-      props: {
-        testimonials: []
-      }
+    // testimonials remains empty array if fetch fails
+  }
+  
+  return {
+    props: {
+      testimonials
     }
   }
 }
