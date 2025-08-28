@@ -48,41 +48,6 @@ const featuredServices = [
 ]
 
 export default function Home({ testimonials }: HomeProps) {
-  // Fallback testimonials if no real feedback exists
-  const fallbackTestimonials = [
-    {
-      id: 'fallback-1',
-      customerName: 'Sample Client',
-      rating: 5,
-      comment: 'This is a sample testimonial. Real client reviews will appear here once feedback is submitted.',
-      serviceName: 'Hair Services',
-      staffName: 'Our Professional Team',
-      date: new Date().toISOString(),
-      wouldRecommend: true
-    },
-    {
-      id: 'fallback-2',
-      customerName: 'Demo Customer',
-      rating: 5,
-      comment: 'Sample review placeholder. Actual client testimonials will display when customers leave feedback.',
-      serviceName: 'Spa Services',
-      staffName: 'Our Expert Staff',
-      date: new Date().toISOString(),
-      wouldRecommend: true
-    },
-    {
-      id: 'fallback-3',
-      customerName: 'Preview Client',
-      rating: 5,
-      comment: 'Placeholder testimonial. Real customer reviews will appear here after service appointments.',
-      serviceName: 'Beauty Services',
-      staffName: 'Our Skilled Team',
-      date: new Date().toISOString(),
-      wouldRecommend: true
-    }
-  ]
-
-  const displayTestimonials = testimonials.length > 0 ? testimonials.slice(0, 3) : fallbackTestimonials
   const hasRealTestimonials = testimonials.length > 0
   return (
     <>
@@ -228,68 +193,59 @@ export default function Home({ testimonials }: HomeProps) {
               <hr className="mt-8 mb-0 border-t border-gray-200 w-full" />
             </div>
 
-            {/* Testimonials Section */}
-            <section className="py-16 bg-white">
-              <div className="w-full max-w-none mx-auto px-4" style={{ width: '100%' }}>
-                <h2 className="text-4xl font-heading text-primary-green text-center mb-6">
-                  What Our Clients Say
-                </h2>
-                
-                {!hasRealTestimonials && (
-                  <div className="text-center mb-8">
-                    <p className="text-gray-600 italic">
-                      📝 Client testimonials will appear here after customers complete their appointments and leave feedback.
-                    </p>
-                  </div>
-                )}
-                
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                  {displayTestimonials.map((testimonial) => (
-                    <div key={testimonial.id} className={`bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto ${!hasRealTestimonials ? 'opacity-75' : ''}`}>
-                      <div className="flex items-center mb-4">
-                        {!hasRealTestimonials && (
-                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2">PREVIEW</span>
-                        )}
-                        {/* Star rating */}
-                        {[...Array(5)].map((_, i) => (
-                          <svg 
-                            key={i} 
-                            className={`w-5 h-5 mr-1 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
-                            fill="currentColor" 
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" />
-                          </svg>
-                        ))}
-                        <span className="ml-2 text-sm text-gray-600">({testimonial.rating}/5)</span>
-                      </div>
-                      <p className="text-black italic text-left mb-4">
-                        "{testimonial.comment}"
-                      </p>
-                      <div className="text-sm text-gray-500 mb-2">
-                        <span className="font-semibold">{testimonial.serviceName}</span> with {testimonial.staffName}
-                      </div>
-                      <div className="text-gray-500 italic text-right w-full">
-                        — {testimonial.customerName}
-                      </div>
-                      {testimonial.wouldRecommend && (
-                        <div className="mt-2 text-xs text-green-600 font-medium">
-                          ✓ Would recommend
+            {/* Testimonials Section - Only show if there are real testimonials */}
+            {hasRealTestimonials && (
+              <section className="py-16 bg-white">
+                <div className="w-full max-w-none mx-auto px-4" style={{ width: '100%' }}>
+                  <h2 className="text-4xl font-heading text-primary-green text-center mb-6">
+                    What Our Clients Say
+                  </h2>
+                  
+                  <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {testimonials.slice(0, 3).map((testimonial) => (
+                      <div key={testimonial.id} className="bg-white shadow-md rounded-lg border border-gray-200 p-10 flex flex-col items-start w-full max-w-[600px] mx-auto">
+                        <div className="flex items-center mb-4">
+                          {/* Star rating */}
+                          {[...Array(5)].map((_, i) => (
+                            <svg 
+                              key={i} 
+                              className={`w-5 h-5 mr-1 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+                              fill="currentColor" 
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" />
+                            </svg>
+                          ))}
+                          <span className="ml-2 text-sm text-gray-600">({testimonial.rating}/5)</span>
                         </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                
-                {hasRealTestimonials && testimonials.length > 3 && (
-                  <div className="text-center mt-8">
-                    <p className="text-gray-600">
-                      Showing {displayTestimonials.length} of {testimonials.length} client reviews
-                    </p>
+                        <p className="text-black italic text-left mb-4">
+                          "{testimonial.comment}"
+                        </p>
+                        <div className="text-sm text-gray-500 mb-2">
+                          <span className="font-semibold">{testimonial.serviceName}</span> with {testimonial.staffName}
+                        </div>
+                        <div className="text-gray-500 italic text-right w-full">
+                          — {testimonial.customerName}
+                        </div>
+                        {testimonial.wouldRecommend && (
+                          <div className="mt-2 text-xs text-green-600 font-medium">
+                            ✓ Would recommend
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                )}
-              </div>
-            </section>
+                  
+                  {testimonials.length > 3 && (
+                    <div className="text-center mt-8">
+                      <p className="text-gray-600">
+                        Showing 3 of {testimonials.length} client reviews
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )}
           </div>
         </section>
       </main>
