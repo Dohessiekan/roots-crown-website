@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "npx prisma generate && npm run seed && next build",
-    "start": "next start",
+    "start": "node server.js",
+    "start:next": "next start",
     "lint": "next lint",
     "images": "node scripts/image-manager.js",
     "postinstall": "npx prisma generate",
     "seed": "node seed-production.js",
+    "hostinger:setup": "node hostinger-setup.js",
+    "hostinger:build": "npm install && npx prisma generate && npm run hostinger:setup && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,0 +1,25 @@
+# Hostinger Deployment Configuration
+
+# Node.js version
+engines:
+  node: ">=18.0.0"
+  npm: ">=8.0.0"
+
+# Build settings
+build:
+  command: "npm run hostinger:build"
+  publish: ".next"
+
+# Runtime settings  
+runtime:
+  node_version: "18"
+
+# Environment variables (set these in Hostinger control panel)
+# NODE_ENV=production
+# DATABASE_URL=postgresql://username:password@host:port/database
+# GMAIL_USER=rootscrown.rwanda@gmail.com
+# GMAIL_APP_PASSWORD=ljvr hfgh xbrs xtms
+# NEXT_PUBLIC_BASE_URL=https://yourdomain.com
+
+# Startup script
+start_command: "npm start"
